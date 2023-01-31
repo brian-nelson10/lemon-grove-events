@@ -7,9 +7,9 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import Landing from './pages/Landing';
+// import Landing from './pages/Landing';
 import Home from './pages/Home';
-import Test from './pages/Test';
+// import Test from './pages/Test';
 import { AnimatePresence } from 'framer-motion';
 
 const httpLink = createHttpLink({
@@ -32,33 +32,29 @@ const client = new ApolloClient({
 });
 
 function App() {
-
-
   return (
     <ApolloProvider client={client}>
       <AnimatePresence >
       <Router >
-        <div className='bg-[#eee8c5] w-max h-max'>
+        <div className="bg-[#fdf8e1] w-max h-max">
           <Routes >
             <Route
               path="/"
-              element={<Landing/>}
+              element={<Home/>}
               />
-              <Route 
+              {/* <Route 
                 path="/Home"
                 element={<Home/>}
                 />
                 <Route 
                 path="/Test"
                 element={<Test/>}
-                />
+                /> */}
           </Routes>
         </div>
       </Router>
       </AnimatePresence>
     </ApolloProvider>
-
-    
   );
 }
 

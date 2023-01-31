@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: "Larissa";
+    src: url("../src/assets/fonts/Larissa.ttf");
+}
