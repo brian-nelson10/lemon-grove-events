@@ -10,7 +10,8 @@ import { setContext } from '@apollo/client/link/context';
 // import Landing from './pages/Landing';
 import Home from './pages/Home';
 // import Test from './pages/Test';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, AnimateSharedLayout } from 'framer-motion';
+
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -34,9 +35,10 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
+      <AnimateSharedLayout type="crossfade">
       <AnimatePresence >
       <Router >
-        <div className="bg-[#fdf8e1] w-max h-max">
+        <div className="bg-[#fdf8e1] w-max h-max z-10">
           <Routes >
             <Route
               path="/"
@@ -54,6 +56,7 @@ function App() {
         </div>
       </Router>
       </AnimatePresence>
+      </AnimateSharedLayout>
     </ApolloProvider>
   );
 }

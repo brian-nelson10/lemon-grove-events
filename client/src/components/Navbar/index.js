@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./navbar.css";
 import { motion } from "framer-motion";
-// import Hamburger from "../Hamburger";
 
 export default function Navbar({text}) {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +17,6 @@ export default function Navbar({text}) {
       top: "-90vh",
     },
   };
-
   const linkVariants = {
     opened: {
       opacity: 1,
@@ -29,7 +27,6 @@ export default function Navbar({text}) {
       y: 0,
     },
   };
-
   const lineTop = {
     opened: {
       rotate: 45,
@@ -63,7 +60,7 @@ export default function Navbar({text}) {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
       opacity: 1,
-      transition: {  staggerChildren: .09, delayChildren: 5.5 * i },
+      transition: {  staggerChildren: .09, delayChildren: 3.6 * i },
     }),
   };
 // Variants for each letter
@@ -92,11 +89,88 @@ export default function Navbar({text}) {
       },
     },
   };
-
+  const child1 = {
+    visible: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 100,
+        delay: 3.5,
+        duration: 2,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      x: 0,
+      y: -50,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 100,
+        duration: 2,
+        timing: [2, 1, 1, 1]        
+      },
+    },
+  };
+  const child2 = {
+    visible: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 100,
+        delay: 3.75,
+        duration: 2,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      x: 0,
+      y: -50,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 100,
+        duration: 2,
+        timing: [2, 1, 1, 1]        
+      },
+    },
+  };
+  const child3 = {
+    visible: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 100,
+        delay: 4,
+        duration: 2,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      x: 0,
+      y: -50,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 100,
+        duration: 2,
+        timing: [2, 1, 1, 1]        
+      },
+    },
+  };
   return (
       <>
-      <motion.nav className="relative flex flex-wrap bg-[#fdf8e1] w-screen p-1 pt-2 z-20 hover:cursor-pointer md:p-4">
-        <div className="grid grid-cols-2 w-screen">
+      <motion.nav className="relative flex flex-wrap bg-transparent w-screen p-1 pt-2 z-50 hover:cursor-pointer md:p-4">
+        <div className="grid grid-cols-2 w-screen ">
       <motion.div
      className="text-xl justify-start text-start items-center pl-4 pt-5 md:text-4xl"
       variants={container}
@@ -115,7 +189,7 @@ export default function Navbar({text}) {
         //   variants={iconVariants}
         className="container-fluid md:pr-6"
         animate={isOpen ? "opened" : "closed"}
-        whileHover={{ scale: 1 }}
+        whileHover={{ scale: 1.1 }}
         onClick={() => setIsOpen(!isOpen)}
       >
         <motion.svg 
@@ -129,9 +203,27 @@ export default function Navbar({text}) {
             animate={isOpen ? "opened" : "closed"}
             initial={false}
             id="line">
-            <motion.line className="line top" variants={lineTop}  transition={{ type: "spring", stiffness: 260, damping: 20 }} x1="16" x2="76" y1="26" y2="26" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" />
-            <motion.line className="line middle" variants={lineMiddle}  transition={{ type: "spring", stiffness: 260, damping: 20 }} x1="16" x2="76" y1="36" y2="36" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" />
-            <motion.line className="line bottom" variants={lineBottom}  transition={{ type: "spring", stiffness: 260, damping: 20 }} x1="16" x2="76" y1="46" y2="46" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" />
+              <motion.g 
+          variants={child3} 
+          initial="hidden"
+          animate="visible">
+            <motion.line className="line top" animate={isOpen ? "opened" : "closed"}
+            initial={false} variants={lineTop} transition={{ type: "spring", stiffness: 260, damping: 20 }} x1="16" x2="76" y1="26" y2="26" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" />
+            </motion.g>
+            <motion.g 
+          variants={child2} 
+          initial="hidden"
+          animate="visible">
+            <motion.line className="line middle" animate={isOpen ? "opened" : "closed"}
+            initial={false} variants={lineMiddle}  transition={{ type: "spring", stiffness: 260, damping: 20 }} x1="16" x2="76" y1="36" y2="36" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" />
+            </motion.g>
+            <motion.g 
+          variants={child1} 
+          initial="hidden"
+          animate="visible">
+            <motion.line className="line bottom" animate={isOpen ? "opened" : "closed"}
+            initial={false} variants={lineBottom}  transition={{ type: "spring", stiffness: 260, damping: 20 }} x1="16" x2="76" y1="46" y2="46" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" />
+            </motion.g>
           </motion.g>
         </motion.svg>
         </motion.div>
@@ -144,14 +236,14 @@ export default function Navbar({text}) {
     </motion.nav>
     
     <motion.nav
-      className="bg-[#fcefb4] h-96 w-screen fixed top-0 flex flex-col items-center justify-center align-center z-10"
+      className="bg-transparent h-96 w-screen fixed top-0 flex flex-col items-center justify-center align-center z-10"
       initial={false}
       variants={menuVariants}
       animate={isOpen ? "opened" : "closed"}
     >
-        <motion.li className="text-white font-larissa mb-7 text-2xl" variants={linkVariants}>home</motion.li>
-        <motion.li className="text-white font-larissa mb-7 text-2xl" variants={linkVariants}>about</motion.li>
-        <motion.li className="text-white font-larissa mb-7 text-2xl" variants={linkVariants}>gallery</motion.li>
+        <motion.li className="link text-white font-larissa mb-7 text-2xl" variants={linkVariants}><a href="">home</a></motion.li>
+        <motion.li className="link text-white font-larissa mb-7 text-2xl" variants={linkVariants}><a href="">about</a></motion.li>
+        <motion.li className="link text-white font-larissa mb-7 text-2xl" variants={linkVariants}><a href="">gallery</a></motion.li>
       </motion.nav>
       </>
     
