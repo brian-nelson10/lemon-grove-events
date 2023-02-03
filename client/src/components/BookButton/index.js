@@ -1,20 +1,36 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import "./bookButton.css";
 import { motion, useAnimation } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 const wordVariants = {
   hovered: {
     y: [0, -2, 0, 2, 0],
     transition: { duration: .5, ease: 'easeInOut' }
   }
 }
+const entry = {
+    initial: {
+        y: 100,
+        opacity: 0
+    },
+    animate: {
+        y: 0,
+        opacity: [0, 0, .1, .2, .4, .6, .8, 1],
+        transition: {
+            type: "spring",
+            bounce: .3,
+            duration: 3,
+            delay: 6.2
+        }
+    }
+}
 const BookButton = () => {
   const [isAnimating, setIsAnimating] = useState(false);
-  const navigate = useNavigate();
+//   const navigate = useNavigate();
   const uploadControls = useAnimation();
   const loadingControls = useAnimation();
   const doneControls = useAnimation();
-  const loaderControls = useAnimation();
+//   const loaderControls = useAnimation();
   const loadingBarControls = useAnimation();
   const animate = async () => {
     setIsAnimating(true);
@@ -57,7 +73,11 @@ const BookButton = () => {
     setIsAnimating(false);
   };
   return (
-    <div className="absolute z-50 pt-6 upload-button hover:cursor-pointer justify-center bg-black items-center grid top-96 right-2/4 left-2/4">
+    <motion.div 
+        variants={entry}
+        initial="initial"
+        animate="animate"
+        className="absolute z-50 pt-6 upload-button hover:cursor-pointer justify-center bg-black items-center grid top-96 right-2/4 left-2/4">
       <div className="wrapper overflow-hidden cursor-pointer rounded-lg relative items-center justify-center" onClick={() => !isAnimating && animate()}>
         <motion.div 
           className="container bg-transparent z-10 top-0 cursor-pointer text-white"
@@ -86,7 +106,7 @@ const BookButton = () => {
           <div>Lets Go!</div>
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

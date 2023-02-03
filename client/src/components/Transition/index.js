@@ -14,7 +14,7 @@ const blackBox = {
       opacity: .5,
       transition: {
         when: "afterChildren",
-        duration: .75,
+        duration: .5,
         ease: [0.87, 0, 0.13, 1],
         
       },
@@ -54,8 +54,8 @@ const blackBox = {
     animate: {
       y: 1000,
       transition: {
-        duration: 2.5,
-        delay: 2.5,
+        duration: 2,
+        delay: 2,
         
       },
     },
