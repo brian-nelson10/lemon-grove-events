@@ -169,7 +169,7 @@ export default function Navbar({text}) {
   };
   return (
       <>
-      <motion.nav className="relative flex flex-wrap bg-transparent w-screen p-1 pt-2 z-50 hover:cursor-pointer md:p-4">
+      <motion.nav className="navbar relative flex flex-wrap bg-transparent w-screen p-1 pt-2 z-50 hover:cursor-pointer md:p-4">
         <div className="grid grid-cols-2 w-screen ">
       <motion.div
      className="text-xl justify-start text-start items-center pl-4 pt-5 md:text-4xl"

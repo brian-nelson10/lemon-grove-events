@@ -8,7 +8,7 @@ module.exports = {
                 larissa: ['Larissa', 'cursive'],
             },
             fontSize: {
-                'xlxl': '10rem'
+                'xlxl': '14rem'
             },
         },
     },

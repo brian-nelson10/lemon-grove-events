@@ -1,0 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Knewave);
+.mask {
+  -webkit-clip-path: url(#svgPath);
+  clip-path: url(#svgPath);
+}

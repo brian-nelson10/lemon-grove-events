@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Hero from "../../assets/images/stock.jpeg";
 import "./transition.css";
 
 const blackBox = {
@@ -13,8 +12,8 @@ const blackBox = {
       height: 0,
       opacity: .5,
       transition: {
-        when: "afterChildren",
-        duration: .5,
+        delay: 4.3,
+        duration: 1.2,
         ease: [0.87, 0, 0.13, 1],
         
       },
@@ -54,9 +53,9 @@ const blackBox = {
     animate: {
       y: 1000,
       transition: {
-        duration: 2,
-        delay: 2,
-        
+        duration: 1.9,
+        delay: 1.9,
+        ease: "easeIn"
       },
     },
   };
@@ -101,7 +100,7 @@ const blackBox = {
           className="back text-xlxl text-justify font-larissa w-full h-full opacity-100"
           textAnchor="middle"
           x="50%"
-          y="20%"
+          y="25%"
           style={{ fill: "url(#pattern)" }}
         >
           Hello, You
@@ -110,7 +109,7 @@ const blackBox = {
           className="back text-xlxl text-justify font-larissa w-full h-full"
           textAnchor="middle"
           x="50%"
-          y="35%"
+          y="50%"
           style={{ fill: "url(#pattern)" }}
         >
           Gorgeous
@@ -119,7 +118,7 @@ const blackBox = {
           className="back text-xlxl text-justify font-larissa w-full h-full"
           textAnchor="middle"
           x="50%"
-          y="50%"
+          y="75%"
           style={{ fill: "url(#pattern)" }}
         >
           Picknicker

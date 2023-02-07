@@ -9,7 +9,7 @@ import {
 import { setContext } from '@apollo/client/link/context';
 // import Landing from './pages/Landing';
 import Home from './pages/Home';
-// import Test from './pages/Test';
+import Test from './pages/Test';
 import { AnimatePresence, AnimateSharedLayout } from 'framer-motion';
 
 
@@ -47,11 +47,11 @@ function App() {
               {/* <Route 
                 path="/Home"
                 element={<Home/>}
-                />
+                /> */}
                 <Route 
                 path="/Test"
                 element={<Test/>}
-                /> */}
+                />
           </Routes>
         </div>
       </Router>
