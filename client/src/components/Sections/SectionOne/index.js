@@ -4,6 +4,9 @@ import { motion } from "framer-motion";
 import Img from "../../../assets/images/stockTwo.jpeg";
 import basket from "../../../assets/images/threeLemons.svg";
 import SectionTwo from "../SectionTwo";
+import SectionThree from "../SectionThree";
+import Footer from "../../Footer";
+import SectionFour from "../SectionFour";
 const content = {
     offscreen: {
         y:100,
@@ -53,10 +56,6 @@ const SectionOne = () => {
     
     return(
     <>
-    {/* <section
-  className="container flex items-center justify-center h-[20%] m-auto bg-fixed bg-center bg-cover custom-img"
-> */}
-{/* </section> */}
 <motion.section 
     className="w-screen h-[600px] mb-20 m-auto container mx-auto">
         <div className="grid grid-cols-2 w-full gap-4 items-center justify-center">
@@ -75,7 +74,7 @@ const SectionOne = () => {
     magna non varius. Proin leo felis, euismod non porta eget, varius sit amet
     sapien. </p>
     <div className="container mt-8 ml-[105px] justify-center items-center">
-    <a className="btn btn-solid btn-white" href="" target="_self">
+    <a className="btn btn-solid btn-white text-black border-black" href="" target="_self">
         <span className="texter">The Picnic.</span>
     </a>
     </div>
@@ -86,7 +85,7 @@ const SectionOne = () => {
     initial="offscreen"
     whileInView="onscreen"
     alt="img"
-    className=" img w-[1400px] h-[480px] " src={Img} />
+    className=" img w-[1400px] h-[480px] -ml-[5rem]" src={Img} />
   </div>
  </div>
 </motion.section>
@@ -105,30 +104,21 @@ const SectionOne = () => {
 <section>
     <SectionTwo />
 </section>
+<section>
+    <SectionThree />
+</section>
+<section>
+    <SectionFour />
+</section>
+<br/>
 <motion.div 
     variants={content}
     initial="offscreen"
     whileInView="onscreen"
-    className="max-w-lg m-auto">
-  <p className="mb-4">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat a
-    magna non varius. Proin leo felis, euismod non porta eget, varius sit amet
-    sapien. Maecenas in nulla at leo convallis consectetur id a sapien. Nulla
-    nec pulvinar nisi. Vivamus non facilisis lacus, et volutpat libero. Nulla ac
-    odio aliquam, accumsan arcu ut, lacinia est. Nulla eu sem elit. Fusce nec
-    laoreet sem, semper molestie libero.
-  </p>
-  <p className="mb-4">
-    Ut sagittis lacus consequat accumsan venenatis. Sed sollicitudin, lectus et
-    fringilla ultrices, dolor nisi scelerisque tortor, vel finibus magna massa
-    non nunc. Phasellus massa quam, egestas a nisl sed, porta volutpat metus.
-    Nunc sed elit ac tellus tempor cursus. Suspendisse potenti. Vestibulum
-    varius rutrum nisl nec consequat. Suspendisse semper dignissim sem viverra
-    semper. Nulla porttitor, purus nec accumsan pharetra, nisi dolor condimentum
-    ipsum, id consequat nulla nunc in ligula.
-  </p>
-  
+    className="">
+ <Footer/>
 </motion.div>
+
     </>
     );
 };

@@ -4,6 +4,15 @@ import { motion } from "framer-motion";
 
 export default function Navbar({text}) {
   const [isOpen, setIsOpen] = useState(false);
+  const [color, setColor] = useState(false)
+  const changeColor = () => {
+    if (window.scrollY >= 968) {
+      setColor(true)
+    } else {
+      setColor(false)
+    }
+  }
+  window.addEventListener('scroll', changeColor)
   const letters = Array.from(text);
   const menuVariants = {
     opened: {
@@ -169,7 +178,7 @@ export default function Navbar({text}) {
   };
   return (
       <>
-      <motion.nav className="navbar relative flex flex-wrap bg-transparent w-screen p-1 pt-2 z-50 hover:cursor-pointer md:p-4">
+      <motion.nav className={color ? 'navbar bg-white opacity-[80%] fixed flex flex-wrap h-[5.5rem] w-screen -mt-6 p-1 pt-2 z-50 hover:cursor-pointer md:p-4' : 'navbar bg-transparent fixed flex flex-wrap w-screen p-1 pt-2 z-50 hover:cursor-pointer md:p-4'}>
         <div className="grid grid-cols-2 w-screen ">
       <motion.div
      className="text-xl justify-start text-start items-center pl-4 pt-5 md:text-4xl"
@@ -228,13 +237,10 @@ export default function Navbar({text}) {
         </motion.svg>
         </motion.div>
         <motion.div>
-        
         </motion.div>
-        
       </motion.div>
       </div>
     </motion.nav>
-    
     <motion.nav
       className="bg-transparent h-96 w-screen fixed top-0 flex flex-col items-center justify-center align-center z-10"
       initial={false}

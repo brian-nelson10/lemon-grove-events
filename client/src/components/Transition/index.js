@@ -13,7 +13,7 @@ const blackBox = {
       opacity: .5,
       transition: {
         delay: 4.3,
-        duration: 1.2,
+        duration: 1,
         ease: [0.87, 0, 0.13, 1],
         
       },
@@ -53,9 +53,8 @@ const blackBox = {
     animate: {
       y: 1000,
       transition: {
-        duration: 1.9,
+        duration: 1,
         delay: 1.9,
-        ease: "easeIn"
       },
     },
   };

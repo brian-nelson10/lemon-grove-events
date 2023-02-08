@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   list-style: none;
+  transition: all 2s ease
 }
 
 .link {
@@ -34,4 +35,12 @@
 .link > a:hover::after, li > a.active-nav::after {
   width: 100%;
   background: white;
+}
+
+.header {
+  background-color: transparent;
+}
+
+.header-bg {
+  background-color: whitesmoke;
 }

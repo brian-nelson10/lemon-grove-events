@@ -9,6 +9,8 @@ import Transition from "../components/Transition";
 import BookButton from "../components/BookButton";
 import Social from "../components/Social";
 import SectionOne from "../components/Sections/SectionOne";
+import Lemon from "../components/Lemon";
+import Footer from "../components/Footer";
 // import Loader from "../components/Loader";
 export default function Home() {
     React.useState(() => {
@@ -25,7 +27,7 @@ export default function Home() {
                 style={{backgroundImage: `url(${Hero})`}}
                 className='w-screen h-screen flex flex-wrap absolute'>
                 <div className="z-30 ">
-              <Navbar className="bg-transparent" text="Lemon Grove"/>
+              <Navbar text="Lemon Grove"/>
               </div>
               <div className="heroContainer items-center justify-center flex flex-wrap">
               
@@ -40,16 +42,19 @@ export default function Home() {
                 <div className="top-[7rem] left-[14rem] z-20 absolute ">
                 <HeroText />
                 </div>
-                <div className="z-20">
+                <div className="z-20 fixed">
                     <Social />
                 </div>
               </div>
               <SectionOne />
-              </section>
-              {/* <section className="z-30">
-                <SectionOne />
+              {/* <section>
+                <Lemon />
               </section> */}
+              <Lemon/>
+              </section>          
+              <Footer />
               </main>
+              
           </>               
       </AnimatePresence>
     </AnimateSharedLayout>

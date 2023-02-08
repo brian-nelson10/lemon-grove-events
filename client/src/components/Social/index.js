@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from "framer-motion";
 import SocialMediaArrow from '../../assets/images/social-media-arrow.svg';
 import { FaInstagram } from 'react-icons/fa';
@@ -17,17 +17,26 @@ const log = {
     },
   };
 const Social = () => {
+    const [color, setColor] = useState(false)
+    const changeColor = () => {
+      if (window.scrollY >= 200) {
+        setColor(true)
+      } else {
+        setColor(false)
+      }
+    }
+    window.addEventListener('scroll', changeColor)
     return (
 <motion.div 
     variants={log} 
     initial="initial"
     animate="animate"
-    className="social flex flex-col absolute gap-8 left-[50px] bottom-[20px] w-50px ">
+    className={color ? "social text-black flex flex-col gap-8 absolute right-[42.7rem] top-[10rem] w-50px " : "social text-white flex flex-col gap-8 absolute right-[42.7rem] top-[10rem] w-50px "  }>
             <div className="socialIndicator w-50px ">
               <p className='text-[1.8rem] text-white tracking-[1rem] rotate-90 -translate-y-[90px] -translate-x-[75px] text-larissa'>Social</p>
               <img className='max-h-6 translate-x-[5px]' src={SocialMediaArrow} alt="icon" />
             </div>
-            <div className="socialText text-white inline-block tracking-5px text-[1.6rem] mb-[3rem] -translate-x-[1px] ">
+            <div className="socialText inline-block tracking-5px text-[1.6rem] mb-[3rem] -translate-x-[1px] ">
               <ul>
                 <li>
                   <a
