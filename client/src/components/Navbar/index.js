@@ -178,7 +178,7 @@ export default function Navbar({text}) {
   };
   return (
       <>
-      <motion.nav className={color ? 'navbar bg-white opacity-[80%] fixed flex flex-wrap h-[5.5rem] w-screen -mt-6 p-1 pt-2 z-50 hover:cursor-pointer md:p-4' : 'navbar bg-transparent fixed flex flex-wrap w-screen p-1 pt-2 z-50 hover:cursor-pointer md:p-4'}>
+      <motion.nav className={color ? 'navbar z-60 bg-white opacity-[80%] fixed flex flex-wrap h-[5.5rem] w-screen -mt-6 p-1 pt-2 z-50 hover:cursor-pointer md:p-4' : 'navbar z-60 bg-transparent fixed flex flex-wrap w-screen p-1 pt-2 z-50 hover:cursor-pointer md:p-4'}>
         <div className="grid grid-cols-2 w-screen ">
       <motion.div
      className="text-xl justify-start text-start items-center pl-4 pt-5 md:text-4xl"
@@ -242,12 +242,12 @@ export default function Navbar({text}) {
       </div>
     </motion.nav>
     <motion.nav
-      className="bg-transparent h-96 w-screen fixed top-0 flex flex-col items-center justify-center align-center z-10"
+      className="bg-transparent h-96 w-screen fixed top-0 flex flex-col items-center justify-center align-center z-60"
       initial={false}
       variants={menuVariants}
       animate={isOpen ? "opened" : "closed"}
     >
-        <motion.li className="link text-white font-larissa mb-7 text-2xl" variants={linkVariants}><a href="">home</a></motion.li>
+        <motion.li className="link text-white font-larissa mb-7 text-2xl" variants={linkVariants}><a href="/">home</a></motion.li>
         <motion.li className="link text-white font-larissa mb-7 text-2xl" variants={linkVariants}><a href="">about</a></motion.li>
         <motion.li className="link text-white font-larissa mb-7 text-2xl" variants={linkVariants}><a href="">gallery</a></motion.li>
       </motion.nav>

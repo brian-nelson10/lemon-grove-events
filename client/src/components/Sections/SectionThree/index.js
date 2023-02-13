@@ -6,7 +6,7 @@ import icon from "../../../assets/images/lemonbw2.png";
 const SectionThree = () => {
     return (
         <>
-        <br/><br/><br/><br/>
+        <br/><br/>
             <section className="container flex ml-20 mx-auto w-screen textImage right parallax-elements-anim">
                     <div className="grid grid-cols-2 w-full gap-4 items-center justify-center">
                         <div className="grid-cols-1 gap-4 ml-[4rem] justify-start items-start text-start col-md-6 col-lg-5 offset-lg-1 textImage__content parallax-text">

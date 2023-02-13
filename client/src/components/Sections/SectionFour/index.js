@@ -6,13 +6,12 @@ import icon from "../../../assets/images/lemonbw3.png";
 const SectionFour = () => {
     return (
         <>
-        <br/><br/><br/><br/>
+        <br/><br/>
             <section className="container flex ml-20 mx-auto w-screen textImage right parallax-elements-anim">
                     <div className="grid grid-cols-2 w-full gap-4 items-center justify-center">
                         <div className="mb-4 pl-8 justify-center items-center">
                             <motion.div className="zoomin frame flex flex-wrap container ml-[4rem] justify-center items-center">
                                 <img className="img w-[1400px] h-[480px] z-10" alt="" src={img} />
-                                
                             </motion.div>
                         </div>
                         <div className="grid-cols-1 gap-4 ml-2 mr-[4rem] justify-end items-end text-end -mt-16">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import {
   ApolloClient,
   InMemoryCache,
@@ -8,9 +8,12 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 // import Landing from './pages/Landing';
-import Home from './pages/Home';
-import Test from './pages/Test';
-import { AnimatePresence, AnimateSharedLayout } from 'framer-motion';
+// import Home from './pages/Home';
+// import Test from './pages/Test';
+import { AnimatePresence } from 'framer-motion';
+import AnimatedRoutes from './components/AnimatedRoutes';
+// import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 
 const httpLink = createHttpLink({
@@ -31,15 +34,53 @@ const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
+// const transition = {
+//   initial: {
+//     opacity: 0,
+//     clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)', 
+//     transition: { duration: .4 }
+//   },
+//   animate: {
+    
+//     clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+//     transition: { duration: .4, staggerChildren: .1 }
+//   },
+//   exit: {
+//     clipPath: 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)',
+//     transition: { duration: .4 }
+//   }
+// }
 
 function App() {
+  // const [show, setShow] = useState(false)
+  // const changeShow = () => {
+  //   if (window.scrollY >= 3460) {
+  //     setShow(true)
+  //   } else {
+  //     setShow(false)
+  //   }
+  // }
+  // window.addEventListener('scroll', changeShow);
   return (
     <ApolloProvider client={client}>
-      <AnimateSharedLayout type="crossfade">
-      <AnimatePresence >
+      {/* <AnimateSharedLayout type="crossfade"> */}
+      <AnimatePresence>
+        {/* <motion.div
+         variants={transition}
+         
+         initial="initial"
+         animate="animate"
+         exit="exit"
+         className="base-page-size">  */}
       <Router >
-        <div className="bg-[#fdf8e1] w-max h-max z-10">
-          <Routes >
+      {/* <div className={show ? "invisible navi" : "navi z-30"}>
+        <Navbar text="Lemon Grove" />
+        </div> */}
+        
+        <AnimatedRoutes />
+        
+        {/* <div className="w-max h-max z-10"> */}
+          {/* <Routes >
             <Route
               path="/"
               element={<Home/>}
@@ -47,16 +88,18 @@ function App() {
               {/* <Route 
                 path="/Home"
                 element={<Home/>}
-                /> */}
+                /> 
                 <Route 
                 path="/Test"
                 element={<Test/>}
                 />
-          </Routes>
-        </div>
+          </Routes> */}
+        {/* </div> */}
       </Router>
+      {/* </motion.div> */}
       </AnimatePresence>
-      </AnimateSharedLayout>
+      <Footer/>
+      {/* </AnimateSharedLayout> */}
     </ApolloProvider>
   );
 }

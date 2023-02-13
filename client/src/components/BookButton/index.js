@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "./bookButton.css";
 import { motion, useAnimation } from 'framer-motion';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 const wordVariants = {
   hovered: {
     y: [0, -2, 0, 2, 0],
@@ -25,6 +25,11 @@ const entry = {
     }
 }
 const BookButton = () => {
+    const navigate = useNavigate();
+    const routeChange = () => {
+        let path = "/book";
+        navigate(path);
+    }
   const [isAnimating, setIsAnimating] = useState(false);
 //   const navigate = useNavigate();
   const uploadControls = useAnimation();
@@ -63,13 +68,14 @@ const BookButton = () => {
     await uploadControls.start({ 
       top: 0,
       zIndex: 4,
-      transition: { delay: 2, duration: .3 }
+      transition: { delay: 2, duration: .3 },
+      
     });
-    doneControls.start({
-      top: '-100%',
-      transition: { duration: 0 }
-    });
-   
+    // doneControls.start({
+    //   top: '-100%',
+    //   transition: { duration: 0 }
+    // });
+    routeChange();
     setIsAnimating(false);
   };
   return (
@@ -102,6 +108,7 @@ const BookButton = () => {
         <motion.div  
           className="-top-full bg-black z-30 absolute left-0 pt-2 h-full w-full flex justify-center items-center overflow-hidden cursor-pointer text-xl rounded-lg text-white font-larissa"
           animate={doneControls}
+
         >
           <div>Lets Go!</div>
         </motion.div>

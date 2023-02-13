@@ -7,6 +7,9 @@ import SectionTwo from "../SectionTwo";
 import SectionThree from "../SectionThree";
 import Footer from "../../Footer";
 import SectionFour from "../SectionFour";
+import Menu from "../../Menu";
+import Contact from "../../Contact";
+import Lemon2 from "../../Lemon/lemon2";
 const content = {
     offscreen: {
         y:100,
@@ -21,21 +24,6 @@ const content = {
             duration: 2,
             restDelta: 0.001,
             delay: .5
-          }
-    }
-}
-const pic = {
-    offscreen: {
-        y: 100,
-        opacity: 0
-    },
-    onscreen: {
-        y: 50,
-        opacity: 1,
-      transition: {
-        duration: 1,
-        delay: .4,
-        ease: "easeIn"
           }
     }
 }
@@ -57,12 +45,13 @@ const SectionOne = () => {
     return(
     <>
 <motion.section 
-    className="w-screen h-[600px] mb-20 m-auto container mx-auto">
+    variants={content}
+    initial="offscreen"
+    whileInView="onscreen"
+    className="w-screen h-[600px] mb-20 m-auto container mx-auto bg-[#efe5dc]">
         <div className="grid grid-cols-2 w-full gap-4 items-center justify-center">
-  <motion.div 
-  variants={content}
-  initial="offscreen"
-  whileInView="onscreen"
+  <div 
+  
   className="mb-4 ml-12 pl-8 justify-center items-center">
     <div className="font-larissa text-[100px] ml-2">
         Picnic.
@@ -78,19 +67,16 @@ const SectionOne = () => {
         <span className="texter">The Picnic.</span>
     </a>
     </div>
-    </motion.div>
+    </div>
   <div className="zoomin frame mb-4 h-[500px] w-[800px]">
-    <motion.img 
-    variants={pic}
-    initial="offscreen"
-    whileInView="onscreen"
+    <img 
     alt="img"
-    className=" img w-[1400px] h-[480px] -ml-[5rem]" src={Img} />
+    className="img w-[1400px] h-[480px] -ml-[5rem]" src={Img} />
   </div>
  </div>
 </motion.section>
 <br/><br/><br/><br/>
-<section className="container flex items-center justify-center h-[30%] m-auto mb-20 bg-fixed bg-center bg-cover rounded-xl custom-img"
+<section className="container flex items-center justify-center h-[30%] m-auto -mb-10 bg-fixed bg-center bg-cover rounded-xl custom-img"
 >
   <motion.div 
     variants={pack}
@@ -101,24 +87,39 @@ const SectionOne = () => {
   </motion.div>
 </section>
 <br/>
-<section>
+<motion.section
+variants={content}
+initial="offscreen"
+whileInView="onscreen">
     <SectionTwo />
-</section>
-<section>
+</motion.section>
+<motion.section
+variants={content}
+initial="offscreen"
+whileInView="onscreen">
     <SectionThree />
-</section>
-<section>
+</motion.section>
+<motion.section
+variants={content}
+initial="offscreen"
+whileInView="onscreen">
     <SectionFour />
+</motion.section>
+<section>
+    <Menu />
 </section>
 <br/>
+{/* <Lemon2/> */}
+<section>
+    <Contact/>
+</section>
 <motion.div 
     variants={content}
     initial="offscreen"
     whileInView="onscreen"
-    className="">
+    className="mt-[100px] bottom-0">
  <Footer/>
 </motion.div>
-
     </>
     );
 };

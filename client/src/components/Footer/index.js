@@ -3,7 +3,7 @@ import logo from "../../assets/images/1.png";
 
 const Footer = () => {
     return (
-<section className="grid mt-10 bg-gray-50 text-gray-600 px-6  lg:px-8 py-12 w-screen bottom-10 shadow-xl">
+<section className="grid mt-[6rem] bg-gray-50 text-gray-600 px-6 lg:px-8 py-12 w-screen bottom-0 shadow-xl">
   
   <div className="max-w-screen-xl mx-auto itmes-center justify-center text-center">
     <div className="grid grid-cols-6 itmes-center justify-center text-centermd:grid-cols-6 lg:grid-cols-8 divide-gray-200 divide-y-2 md:divide-x-2 md:divide-y-0 md:-mx-8">
@@ -59,12 +59,21 @@ const Footer = () => {
       </div>
     </div>
   </div>
-  <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 mt-8 lg:mt-12 border-t-2 border-gray-200 pt-8">
-    
+  <div 
+  className="
+  max-w-screen-xl 
+  mx-auto 
+  flex flex-col 
+  md:flex-row 
+  justify-between 
+  items-center 
+  space-y-4 mt-8 
+  lg:mt-10
+  border-t-2 border-gray-200
+   pt-8">
     <p className="text-sm text-center font-larissa">&copy;2022 Lemon Grove Events. | All rights reserved</p>
   </div>
 </section>
-
 )
 };
 export default Footer;

@@ -1,8 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import img1 from "../assets/images/stock.jpeg";
-import Contact from "../components/Contact";
-import Lemon from "../components/Lemon";
+
 
 const main = {
     initial: {
@@ -13,6 +12,7 @@ const main = {
         opacity: 1,
         x: 0,
         transition: {
+            
             duration: 1,
         }
     },
@@ -37,7 +37,7 @@ const pack = {
         }
     }
 }
-const Book = () => {
+const PackageOne = () => {
     return (
         <>
         <motion.main 
@@ -53,7 +53,7 @@ const Book = () => {
     initial="initial"
     whileInView="animate"
     className="p-5 font-larissa pt-11 text-[1.8rem] h-[7.5rem] text-white tracking-widest">
-  Book Online
+  Package One
   </motion.div>
 </section>
 <section className="grid grid-cols-3 gap-4 mx-[5rem]">
@@ -70,19 +70,12 @@ const Book = () => {
 <hr className="mt-10"/>
 <section>
 </section>
-<section className="grid -mt-[14rem] -ml-[3rem] mb-[9rem] ">
-    <div className="grid" >
-    <Contact />
-    </div>
-    <br/>
-    <div className="grid" >
-    <Lemon />
-    </div>
+<section className="-mt-[14rem] -ml-[3rem] mb-[9rem]">
+    
 </section>
-
 <br/>
         </motion.main>
         </>
     );
 };
-export default Book;
+export default PackageOne;
