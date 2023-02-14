@@ -1,59 +1,35 @@
-import { motion } from "framer-motion";
 import React from "react";
-import "./test.css"
-// import { motion } from "framer-motion";
-const main = {
-    initial: {
-        x: 100,
-        opacity: 0
-    },
-    animate: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            
-            duration: 1,
-        }
-    },
-    exit: {
-        opacity: 0,
-        x: -100,
-        transition: {
-            duration: .3
+import { motion } from "framer-motion";
+export default function Test() {
+    const opac = {
+        initial: {
+            pathLength: 0,
+           fillOpacity: 0
+        },
+        animate: {
+           fillOpacity: [0,0,0,0,0,.2,.5,.8,1],
+            pathLength: 1,
+            transition: {
+                duration: 2,
+                delay: .5,
+                ease: "easeIn"
+            }
         }
     }
-}
-export default function Test() {
-    // const opac = {
-    //     initial: {
-    //         pathLength: 0,
-    //         fillOpacity: 0
-    //     },
-    //     animate: {
-    //         pathLength: 2,
-    //         fillOpacity: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, .1, .1, .2, .3, .4, .5, .6, .8, .9, 1],
-    //         transition: {
-    //             duration: 3,
-    //             delay: .5,
-    //             ease: "easeIn"
-    //         }
-    //     }
-    // }
     return (
         <>
-        <motion.div
-        variants={main}
-        initial="initial"
-        animate="animate"
-        exit="exit">
-<img class="mask" src="http://webcreatorbox.com/sample/images/rose.jpg" alt="Rose"/>
+<motion.svg xmlns="http://www.w3.org/2000/svg" width="119.604" height="119.61" viewBox="0 0 119.604 119.61">
+  <motion.path 
+  initial="initial"
+  animate="animate"
+  variants={opac}
+  strokeWidth="7"
+  stroke="black" 
+  fill="black"
+  id="Up-Arrow-Icon-SVG-0987678" d="M59.8,0a59.8,59.8,0,1,0,59.8,59.8A59.866,59.866,0,0,0,59.8,0m0,113.315a53.51,53.51,0,1,1,53.51-53.51,53.568,53.568,0,0,1-53.51,53.51M80.914,63.872a3.149,3.149,0,1,1-4.457,4.451L59.8,51.665,43.142,68.322a3.147,3.147,0,1,1-4.451-4.451L57.571,44.986a3.157,3.157,0,0,1,4.457,0Z" transform="translate(-0.001)"/>
+</motion.svg>
 
-<svg>
-<clipPath id="svgPath">
-	<text x="10" y="150" textLength="600" font-family="Knewave" font-size="100px">She said YES!</text>
-</clipPath>
-</svg>
-</motion.div>
+
 </>
     )
 };

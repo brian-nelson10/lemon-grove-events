@@ -5,3 +5,7 @@
     font-family: "Larissa";
     src: url("../src/assets/fonts/Larissa.ttf");
 }
+@font-face {
+    font-family: "Roboto";
+    src: url("../src/assets/fonts/Roboto-Thin.ttf");
+}

@@ -1,29 +1,28 @@
 import React from "react";
 import "./home.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import Hero from "../assets/images/stock.jpeg";
 import HeroText from "../components/HeroText";
 import Navbar from "../components/Navbar";
-// import Transition from "../components/Transition";
 import BookButton from "../components/BookButton";
 import Social from "../components/Social";
 import SectionOne from "../components/Sections/SectionOne";
 import Lemon from "../components/Lemon";
-// import Footer from "../components/Footer";
-// import Menu from "../components/Menu";
-// import Loader from "../components/Loader";
+import Footer from "../components/Footer";
+import ScrollToTop from "../components/ScrollToTop";
 const main = {
     initial: {
         x: 100,
+        y: 0,
         opacity: 0
     },
     animate: {
         opacity: 1,
         x: 0,
+        y: 0,
         transition: {
-            
-            duration: 1,
+            duration: .5,
         }
     },
     exit: {
@@ -33,12 +32,11 @@ const main = {
             duration: .3
         }
     }
-}
-
+};
 export default function Home() {
-    React.useState(() => {
-        typeof windows !== "undefined" && window.scrollTo(0, 0);
-      }, []);
+    // React.useState(() => {
+    //     typeof windows !== "undefined" && window.scrollTo(0, 0);
+    //   }, []);
       const [show, setShow] = useState(false)
       const changeShow = () => {
         if (window.scrollY >= 3460) {
@@ -47,19 +45,25 @@ export default function Home() {
           setShow(false)
         }
       }
-
       window.addEventListener('scroll', changeShow);
     return (
         <AnimateSharedLayout type='crossfade'>
         <AnimatePresence>
             <>
-            {/* <Transition/> */}
             <motion.main 
+            variants={main}
+            initial="initial"
+            animate="animate"
+            exit="exit">
+            <motion.section
                 variants={main}
                 initial="initial"
                 animate="animate"
                 exit="exit"
-                className="grid grid-rows-2 ">
+                className="grid grid-rows-2 z-40">
+                    <motion.div className="z-50">
+            <ScrollToTop/>
+            </motion.div>
               <section
                 style={{backgroundImage: `url(${Hero})`}}
                 className='w-screen h-screen flex flex-wrap absolute'>
@@ -86,9 +90,12 @@ export default function Home() {
               <section>
                 <Lemon />
               </section>
-              </section>         
+              </section>  
+              </motion.section>
+              <section className="grid">
+              <Footer/>  
+              </section>
               </motion.main>
-              
           </>               
       </AnimatePresence>
     </AnimateSharedLayout>

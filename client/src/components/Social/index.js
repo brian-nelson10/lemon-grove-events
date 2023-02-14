@@ -10,7 +10,7 @@ const log = {
       x: 0,
       opacity: 1,
       transition: {
-        delay: 6,
+        delay: 4,
         duration: 2.5,
         ease: [0.6, -0.05, 0.01, 1.5],
       },

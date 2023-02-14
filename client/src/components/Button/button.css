@@ -1,12 +1,4 @@
-.contactImg {
-    background-position: 50%;
-    height: 300px;
-    background-image: url("../../assets/images/stock.jpeg");
-}
-.blocker {
-    box-shadow: 5px 5px 10px black;
-}
-.btn-solid1 {
+.btn-solid {
     transform: perspective(1px) translateZ(0) skewX(-8deg);
     box-shadow: 0 0 1px transparent;
     border: 2.5px solid;
@@ -17,7 +9,7 @@
     text-transform: uppercase;
     font-size: 14px;
     }
-    .btn1 {
+    .btn {
       display: inline-block;
       vertical-align: middle;
       font-family: Metric,sans-serif;
@@ -25,9 +17,8 @@
       text-decoration: none;
       cursor: pointer;
     }
-    .btn1:hover {
-      background-color: #283845 !important;
-      color: white !important;
+    .btn:hover {
+      background-color: #283845;
+      color: white;
       
     }
-/* backdrop-filter: blur(30px); */

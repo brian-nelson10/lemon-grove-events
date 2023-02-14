@@ -10,10 +10,10 @@ import { setContext } from '@apollo/client/link/context';
 // import Landing from './pages/Landing';
 // import Home from './pages/Home';
 // import Test from './pages/Test';
-import { AnimatePresence } from 'framer-motion';
 import AnimatedRoutes from './components/AnimatedRoutes';
+// import ScrollToTop from './components/ScrollToTop';
 // import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 
 
 const httpLink = createHttpLink({
@@ -64,7 +64,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       {/* <AnimateSharedLayout type="crossfade"> */}
-      <AnimatePresence>
+      {/* <AnimatePresence> */}
         {/* <motion.div
          variants={transition}
          
@@ -72,13 +72,15 @@ function App() {
          animate="animate"
          exit="exit"
          className="base-page-size">  */}
-      <Router >
+<Router >
+  {/* <div className='z-50'>
+         <ScrollToTop />
+         </div> */}
+      
       {/* <div className={show ? "invisible navi" : "navi z-30"}>
         <Navbar text="Lemon Grove" />
         </div> */}
-        
         <AnimatedRoutes />
-        
         {/* <div className="w-max h-max z-10"> */}
           {/* <Routes >
             <Route
@@ -97,8 +99,9 @@ function App() {
         {/* </div> */}
       </Router>
       {/* </motion.div> */}
-      </AnimatePresence>
-      <Footer/>
+      {/* </AnimatePresence> */}
+      
+      {/* <Footer/> */}
       {/* </AnimateSharedLayout> */}
     </ApolloProvider>
   );

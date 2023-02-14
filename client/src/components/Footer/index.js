@@ -18,7 +18,7 @@ const Footer = () => {
     </div>
       </div>
       <div className="col-span-8 itmes-center justify-center text-center md:col-span-3 lg:col-span-4 md:px-8 py-4 md:py-0">
-        <img className="h-[250px] w-[250px] ml-[11rem] hover:scale-150 cursor-pointer ease-in-out" src={logo} />
+        <img className="h-[250px] w-[250px] ml-[11rem] hover:scale-150 cursor-pointer ease-in-out" alt="icon" src={logo} />
       </div>
       <div className="col-span-8 md:col-span-3 lg:col-span-2 md:px-8 py-4 md:py-0">
         <h5 className="text-xl font-larissa text-gray-700">Follow us</h5>

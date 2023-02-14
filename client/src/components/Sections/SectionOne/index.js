@@ -9,7 +9,7 @@ import Footer from "../../Footer";
 import SectionFour from "../SectionFour";
 import Menu from "../../Menu";
 import Contact from "../../Contact";
-import Lemon2 from "../../Lemon/lemon2";
+
 const content = {
     offscreen: {
         y:100,
@@ -57,7 +57,7 @@ const SectionOne = () => {
         Picnic.
         </div>
   <div className="justify-center items-center">
-    <img className="w-[180px] h-[200px] justify-center items-center -mt-12 mb-0 ml-20" src={basket}/>
+    <img className="w-[180px] h-[200px] justify-center items-center -mt-12 mb-0 ml-20" src={basket} alt="icon"/>
   </div>
   <p className="w-[50%] justify-center items-center text-center ml-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat a
     magna non varius. Proin leo felis, euismod non porta eget, varius sit amet

@@ -16,12 +16,16 @@ function AnimatedRoutes() {
               path="/"
               element={<Home/>}
               />
+              <Route
+              path="/Home"
+              element={<Home/>}
+              />
               <Route 
                 path="/Book"
                 element={<Book/>}
                 />
                 <Route 
-                path="/PackageOne"
+                path="/packageone"
                 element={<PackageOne/>}
                 />
                 <Route 
