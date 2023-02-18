@@ -5,6 +5,8 @@ import Test from '../pages/Test';
 import { AnimatePresence } from 'framer-motion';
 import Book from "../pages/Book";
 import PackageOne from "../pages/PackageOne";
+import PackageTwo from "../pages/PackageTwo";
+import AddOns from "../pages/AddOns";
 
 function AnimatedRoutes() {
     const location = useLocation();
@@ -27,6 +29,14 @@ function AnimatedRoutes() {
                 <Route 
                 path="/packageone"
                 element={<PackageOne/>}
+                />
+                <Route 
+                path="/packagetwo"
+                element={<PackageTwo/>}
+                />
+                <Route 
+                path="/addons"
+                element={<AddOns/>}
                 />
                 <Route 
                 path="/Test"

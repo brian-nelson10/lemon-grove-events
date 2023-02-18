@@ -27,7 +27,7 @@ const main = {
         }
     }
 }
-const pack = {
+const head = {
     initial: {
         opacity: 0
     },
@@ -67,10 +67,10 @@ const Book = () => {
 >
 
   <motion.div 
-    variants={pack}
+    variants={head}
     initial="initial"
     whileInView="animate"
-    className="p-5 font-larissa pt-11 text-[1.8rem] h-[7.5rem] text-white tracking-widest">
+    className="p-5 font-larissa pt-11 text-[1.8rem] h-[7.5rem] text-white">
   Book Online
   </motion.div>
  

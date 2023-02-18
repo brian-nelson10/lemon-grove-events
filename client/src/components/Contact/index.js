@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "./contact.css";
 import { motion } from 'framer-motion';
-import lemon1 from "../../assets/images/lemonbw.png";
+import emailjs from '@emailjs/browser';
+
 const pack = {
     initial: {
         opacity: 0
@@ -16,8 +17,36 @@ const pack = {
     }
 }
 const Contact = () => {
+    const form = useRef();
+    const [isPackageOne, setIsPackageOne] = useState('');
+    const [isPackageTwo, setIsPackageTwo] = useState('');
+    const [isPackageThree, setIsPackageThree] = useState('');
+    const [isAddOns, setIsAddOns] = useState('');
+
+    const handlePackage = () => {
+        setIsPackageOne(!isPackageOne);
+    };
+    const handlePackageTwo = () => {
+        setIsPackageTwo(!isPackageTwo);
+    };
+    const handlePackageThree = () => {
+        setIsPackageThree(!isPackageThree);
+    };
+    const handleAddOns = () => {
+        setIsAddOns(!isAddOns);
+    }
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+       
+        emailjs.sendForm('service_b1dblxj', 'template_6bq4mri', form.current, 'a6ADH15ktmshf56k_')
+            .then((result) => {
+                alert('Success!!');
+            })
+    }
+
     return (
-        <div className="container mt-[18rem] mb-[100px] w-max">
+        <div className="container contactBody mt-[18rem] mb-[100px] w-max drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]">
             <section className="container contactImg relative mx-auto items-center justify-center text-center h-[20rem] w-max ml-[9rem] bg-fixed bg-center bg-cover rounded-xl z-50"
             >
                 <motion.div
@@ -36,64 +65,105 @@ const Contact = () => {
                 </motion.div>
                 <div className="container text-gray-800 mt-[6rem] px-4 md:px-12">
                     <div className="block blocker rounded-lg shadow-xl py-10 md:py-12 px-2 md:px-6 -mt-[100px] bg-[#efe5dc]">
+                    <form ref={form} onSubmit={sendEmail}>
                         <div className="flex flex-wrap">
                             <div className="grow-0 shrink-0 basis-auto w-full xl:w-5/12 px-3 lg:px-6 mb-12 xl:mb-0">
-                                <form>
+                                    <div className="grid grid-cols-2 gap-2">
                                     <div className="form-group mb-6">
-                                        <input type="text" className="form-control block
+                                        <input type="text" name="fName" className="form-control block
                 w-full
                 px-3
                 py-1.5
-                text-base
-                font-normal
-                text-gray-700
+                font-roboto
+                font-bold
+                tracking-wide
+                text-[#283845]
                 bg-white bg-clip-padding
                 border border-solid border-gray-300
                 rounded
                 transition
                 ease-in-out
                 m-0
-                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput7"
-                                            placeholder="Name" />
+                focus:text-[#283845] focus:bg-white focus:border-[#283845] focus:outline-none"
+                                            placeholder="First Name" />
                                     </div>
                                     <div className="form-group mb-6">
-                                        <input type="email" className="form-control block
+                                        <input type="text" name="lName" className="form-control block
                 w-full
                 px-3
                 py-1.5
-                text-base
-                font-normal
-                text-gray-700
+                font-roboto
+                font-bold
+                tracking-wide
+                text-[#283845]
                 bg-white bg-clip-padding
                 border border-solid border-gray-300
                 rounded
                 transition
                 ease-in-out
                 m-0
-                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput8"
+                focus:text-[#283845] focus:bg-white focus:border-[#283845] focus:outline-none"
+                                            placeholder="Last Name" />
+                                    </div>
+                                    </div>
+                                    <div className="form-group mb-6">
+                                        <input type="number" name="phone" className="form-control block
+                w-full
+                px-3
+                py-1.5
+                font-roboto
+                font-bold
+                tracking-wide
+                text-[#283845]
+                bg-white bg-clip-padding
+                border border-solid border-gray-300
+                rounded
+                transition
+                ease-in-out
+                m-0
+                focus:text-[#283845] focus:bg-white focus:border-[#283845] focus:outline-none"
+                                            placeholder="Phone Number" />
+                                    </div>
+                                    <div className="form-group mb-6">
+                                        <input type="text" name="email" className="form-control block
+                w-full
+                px-3
+                py-1.5
+                font-roboto
+                font-bold
+                tracking-wide
+                text-[#283845]
+                bg-white bg-clip-padding
+                border border-solid border-gray-300
+                rounded
+                transition
+                ease-in-out
+                m-0
+                focus:text-[#283845] focus:bg-white focus:border-[#283845] focus:outline-none"
                                             placeholder="Email address" />
                                     </div>
                                     <div className="form-group mb-6">
-                                        <textarea className="
+                                        <textarea name="message" className="
                 form-control
                 block
                 w-full
                 px-3
                 py-1.5
-                text-base
-                font-normal
-                text-gray-700
+                font-roboto
+                font-bold
+                tracking-wide
+                text-[#283845]
                 bg-white bg-clip-padding
                 border border-solid border-gray-300
                 rounded
                 transition
                 ease-in-out
                 m-0
-                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
-              " id="exampleFormControlTextarea13" rows="3" placeholder="Message"></textarea>
+                focus:text-[#283845] focus:bg-white focus:border-[#283845] focus:outline-none" rows="3" placeholder="Message">
+                </textarea>
                                     </div>
-                                    <div className="form-group form-check text-center mb-6">
-                                        <input type="checkbox"
+                                    {/* <div className="form-group form-check text-center mb-6">
+                                        <input type="checkbox" 
                                             className="
                   form-check-input 
                   appearance-none h-4 w-4 
@@ -107,33 +177,56 @@ const Contact = () => {
                   mr-2 cursor-pointer"/>
                                         <label className="form-check-label inline-block text-gray-800" for="exampleCheck87">Send me a copy of this
                                             message</label>
-                                    </div>
+                                    </div> */}
                                     <div className="container mt-8 justify-center items-center">
-                                        <a className="btn1 btn-solid1 btn-white1 text-[#283845] border-[#283845] hover:bg-black" href="" target="_self">
-                                            <span className="texter">Complete Booking.</span>
-                                        </a>
+                                        <button className="btn1 btn-solid1 btn-white1 text-[#283845] font-larissa tracking-widest font-bold border-[#283845]" >
+                                        <input className="texter hover:cursor-pointer" type="submit" value="Complete Booking" />
+                                        </button>
                                     </div>
-                                </form>
+                                {/* </form> */}
                             </div>
                             <div className="grow-0 shrink-0 basis-auto w-full xl:w-7/12">
+                                <div className="-mt-2 mb-[2rem]">
+                                    <span className="font-larissa text-[2.2rem]">Select Package</span>
+                                    
+                                </div>
                                 <div className="flex flex-wrap">
+                                    
                                     <div className="mb-12 grow-0 shrink-0 basis-auto w-full md:w-6/12 px-3 lg:px-6">
                                         <div className="flex items-start">
                                             <div className="shrink-0">
                                                 <div className="p-4 bg-white border-2 rounded-md shadow-md w-14 h-14 flex items-center justify-center">
-                                                    {/* <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="headset" className="w-5 text-white"
-                                                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                                        <path fill="[#283845]"
-                                                            d="M192 208c0-17.67-14.33-32-32-32h-16c-35.35 0-64 28.65-64 64v48c0 35.35 28.65 64 64 64h16c17.67 0 32-14.33 32-32V208zm176 144c35.35 0 64-28.65 64-64v-48c0-35.35-28.65-64-64-64h-16c-17.67 0-32 14.33-32 32v112c0 17.67 14.33 32 32 32h16zM256 0C113.18 0 4.58 118.83 0 256v16c0 8.84 7.16 16 16 16h16c8.84 0 16-7.16 16-16v-16c0-114.69 93.31-208 208-208s208 93.31 208 208h-.12c.08 2.43.12 165.72.12 165.72 0 23.35-18.93 42.28-42.28 42.28H320c0-26.51-21.49-48-48-48h-32c-26.51 0-48 21.49-48 48s21.49 48 48 48h181.72c49.86 0 90.28-40.42 90.28-90.28V256C507.42 118.83 398.82 0 256 0z">
-                                                        </path>
-                                                    </svg> */}
-                                                    <img className="" alt="icon" src={lemon1}/>
+                                                    <label className="checkbox">
+                                                        <input
+                                                            type="checkbox"
+                                                            value="Date"
+                                                            name="package"
+                                                            checked={isPackageOne}
+                                                            onChange={handlePackage} />
+                                                        <svg viewBox="0 0 21 18">
+                                                            <symbol id="tick-path" viewBox="0 0 21 18" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M5.22003 7.26C5.72003 7.76 7.57 9.7 8.67 11.45C12.2 6.05 15.65 3.5 19.19 1.69" fill="none" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </symbol>
+                                                            <defs>
+                                                                <mask id="tick">
+                                                                    <use className="tick mask" href="#tick-path" />
+                                                                </mask>
+                                                            </defs>
+                                                            <use className="tick" href="#tick-path" stroke="currentColor" />
+                                                            <path fill="white" mask="url(#tick)" d="M18 9C18 10.4464 17.9036 11.8929 17.7589 13.1464C17.5179 15.6054 15.6054 17.5179 13.1625 17.7589C11.8929 17.9036 10.4464 18 9 18C7.55357 18 6.10714 17.9036 4.85357 17.7589C2.39464 17.5179 0.498214 15.6054 0.241071 13.1464C0.0964286 11.8929 0 10.4464 0 9C0 7.55357 0.0964286 6.10714 0.241071 4.8375C0.498214 2.39464 2.39464 0.482143 4.85357 0.241071C6.10714 0.0964286 7.55357 0 9 0C10.4464 0 11.8929 0.0964286 13.1625 0.241071C15.6054 0.482143 17.5179 2.39464 17.7589 4.8375C17.9036 6.10714 18 7.55357 18 9Z" />
+                                                        </svg>
+                                                        <svg className="lines" viewBox="0 0 11 11">
+                                                            <path d="M5.88086 5.89441L9.53504 4.26746" />
+                                                            <path d="M5.5274 8.78838L9.45391 9.55161" />
+                                                            <path d="M3.49371 4.22065L5.55387 0.79198" />
+                                                        </svg>
+                                                    </label>
                                                 </div>
                                             </div>
                                             <div className="grow ml-6">
-                                                <p className="font-bold font-larissa tracking-wide mb-1">Picnic</p>
-                                                <p className="text-gray-500 text-sm font-larissa">A curated amenity for a beach lifestyle</p>
-                                                <p className="text-gray-500 font-larissa">$300</p>
+                                                <p className="text-[#283845] font-bold font-larissa tracking-wide mb-1">Date.</p>
+                                                <p className="text-gray-500 text-sm font-roboto font-bold mb-1">A Perfect Date Night.</p>
+                                                <p className="text-[#283845] font-larissa">$300</p>
                                             </div>
                                         </div>
                                     </div>
@@ -141,19 +234,37 @@ const Contact = () => {
                                         <div className="flex items-start">
                                             <div className="shrink-0">
                                                 <div className="p-4 bg-white border-2 rounded-md shadow-md w-14 h-14 flex items-center justify-center">
-                                                    {/* <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dollar-sign"
-                                                        className="w-3 text-white" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288 512">
-                                                        <path fill="currentColor"
-                                                            d="M209.2 233.4l-108-31.6C88.7 198.2 80 186.5 80 173.5c0-16.3 13.2-29.5 29.5-29.5h66.3c12.2 0 24.2 3.7 34.2 10.5 6.1 4.1 14.3 3.1 19.5-2l34.8-34c7.1-6.9 6.1-18.4-1.8-24.5C238 74.8 207.4 64.1 176 64V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48h-2.5C45.8 64-5.4 118.7.5 183.6c4.2 46.1 39.4 83.6 83.8 96.6l102.5 30c12.5 3.7 21.2 15.3 21.2 28.3 0 16.3-13.2 29.5-29.5 29.5h-66.3C100 368 88 364.3 78 357.5c-6.1-4.1-14.3-3.1-19.5 2l-34.8 34c-7.1 6.9-6.1 18.4 1.8 24.5 24.5 19.2 55.1 29.9 86.5 30v48c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-48.2c46.6-.9 90.3-28.6 105.7-72.7 21.5-61.6-14.6-124.8-72.5-141.7z">
-                                                        </path>
-                                                    </svg> */}
-                                                    <img alt="icon" src={lemon1}/>
+                                                    <label className="checkbox2">
+                                                        <input
+                                                            type="checkbox"
+                                                            value="Event"
+                                                            name="package"
+                                                            checked={isPackageTwo}
+                                                            onChange={handlePackageTwo} />
+                                                        <svg viewBox="0 0 21 18">
+                                                            <symbol id="tick-path2" viewBox="0 0 21 18" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M5.22003 7.26C5.72003 7.76 7.57 9.7 8.67 11.45C12.2 6.05 15.65 3.5 19.19 1.69" fill="none" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </symbol>
+                                                            <defs>
+                                                                <mask id="tick2">
+                                                                    <use className="tick2 mask2" href="#tick-path2" />
+                                                                </mask>
+                                                            </defs>
+                                                            <use className="tick2" href="#tick-path2" stroke="currentColor" />
+                                                            <path fill="white" mask="url(#tick2)" d="M18 9C18 10.4464 17.9036 11.8929 17.7589 13.1464C17.5179 15.6054 15.6054 17.5179 13.1625 17.7589C11.8929 17.9036 10.4464 18 9 18C7.55357 18 6.10714 17.9036 4.85357 17.7589C2.39464 17.5179 0.498214 15.6054 0.241071 13.1464C0.0964286 11.8929 0 10.4464 0 9C0 7.55357 0.0964286 6.10714 0.241071 4.8375C0.498214 2.39464 2.39464 0.482143 4.85357 0.241071C6.10714 0.0964286 7.55357 0 9 0C10.4464 0 11.8929 0.0964286 13.1625 0.241071C15.6054 0.482143 17.5179 2.39464 17.7589 4.8375C17.9036 6.10714 18 7.55357 18 9Z" />
+                                                        </svg>
+                                                        <svg className="lines" viewBox="0 0 11 11">
+                                                            <path d="M5.88086 5.89441L9.53504 4.26746" />
+                                                            <path d="M5.5274 8.78838L9.45391 9.55161" />
+                                                            <path d="M3.49371 4.22065L5.55387 0.79198" />
+                                                        </svg>
+                                                    </label>
                                                 </div>
                                             </div>
                                             <div className="grow ml-6">
-                                                <p className="font-bold font-larissa tracking-wide mb-1">Engagement</p>
-                                                <p className="text-gray-500 font-larissa text-sm">A curated amenity for a beach lifestyle</p>
-                                                <p className="text-gray-500 font-larissa">$499</p>
+                                                <p className="text-[#283845] font-bold font-larissa tracking-wide mb-1">Event</p>
+                                                <p className="text-gray-500 font-roboto font-bold mb-1 text-sm">A curated amenity for a beach lifestyle</p>
+                                                <p className="text-[#283845] font-larissa">$499</p>
                                             </div>
                                         </div>
                                     </div>
@@ -161,18 +272,37 @@ const Contact = () => {
                                         <div className="flex align-start">
                                             <div className="shrink-0">
                                                 <div className="p-4 bg-white border-2 rounded-md shadow-md w-14 h-14 flex items-center justify-center">
-                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="newspaper"
-                                                        className="w-5 text-white" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                                        <path fill="currentColor"
-                                                            d="M552 64H88c-13.255 0-24 10.745-24 24v8H24c-13.255 0-24 10.745-24 24v272c0 30.928 25.072 56 56 56h472c26.51 0 48-21.49 48-48V88c0-13.255-10.745-24-24-24zM56 400a8 8 0 0 1-8-8V144h16v248a8 8 0 0 1-8 8zm236-16H140c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm208 0H348c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm-208-96H140c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm208 0H348c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm0-96H140c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h360c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12z">
-                                                        </path>
-                                                    </svg>
+                                                    <label className="checkbox3">
+                                                        <input
+                                                            type="checkbox"
+                                                            value="I do"
+                                                            name="package"
+                                                            checked={isPackageThree}
+                                                            onChange={handlePackageThree} />
+                                                        <svg viewBox="0 0 21 18">
+                                                            <symbol id="tick-path3" viewBox="0 0 21 18" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M5.22003 7.26C5.72003 7.76 7.57 9.7 8.67 11.45C12.2 6.05 15.65 3.5 19.19 1.69" fill="none" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </symbol>
+                                                            <defs>
+                                                                <mask id="tick3">
+                                                                    <use className="tick3 mask3" href="#tick-path3" />
+                                                                </mask>
+                                                            </defs>
+                                                            <use className="tick3" href="#tick-path3" stroke="currentColor" />
+                                                            <path fill="white" mask="url(#tick3)" d="M18 9C18 10.4464 17.9036 11.8929 17.7589 13.1464C17.5179 15.6054 15.6054 17.5179 13.1625 17.7589C11.8929 17.9036 10.4464 18 9 18C7.55357 18 6.10714 17.9036 4.85357 17.7589C2.39464 17.5179 0.498214 15.6054 0.241071 13.1464C0.0964286 11.8929 0 10.4464 0 9C0 7.55357 0.0964286 6.10714 0.241071 4.8375C0.498214 2.39464 2.39464 0.482143 4.85357 0.241071C6.10714 0.0964286 7.55357 0 9 0C10.4464 0 11.8929 0.0964286 13.1625 0.241071C15.6054 0.482143 17.5179 2.39464 17.7589 4.8375C17.9036 6.10714 18 7.55357 18 9Z" />
+                                                        </svg>
+                                                        <svg className="lines" viewBox="0 0 11 11">
+                                                            <path d="M5.88086 5.89441L9.53504 4.26746" />
+                                                            <path d="M5.5274 8.78838L9.45391 9.55161" />
+                                                            <path d="M3.49371 4.22065L5.55387 0.79198" />
+                                                        </svg>
+                                                    </label>
                                                 </div>
                                             </div>
                                             <div className="grow ml-6">
-                                                <p className="font-bold font-larissa tracking-wide mb-1">Picnic for 2</p>
-                                                <p className="text-gray-500 font-larissa text-sm">A Curated Amenity For a Beach Lifestyle</p>
-                                                <p className="text-gray-500 font-larissa">$499</p>
+                                                <p className="text-[#283845] font-bold font-larissa tracking-wide mb-1">I do.</p>
+                                                <p className="text-gray-500 font-roboto font-bold mb-1 text-sm">A Curated Amenity For a Beach Lifestyle</p>
+                                                <p className="text-[#283845] font-larissa">$499</p>
                                             </div>
                                         </div>
                                     </div>
@@ -180,24 +310,44 @@ const Contact = () => {
                                         <div className="flex align-start">
                                             <div className="shrink-0">
                                                 <div className="p-4 bg-white border-2 rounded-md shadow-md w-14 h-14 flex items-center justify-center">
-                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bug" className="w-5 text-white"
-                                                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                                        <path fill="currentColor"
-                                                            d="M511.988 288.9c-.478 17.43-15.217 31.1-32.653 31.1H424v16c0 21.864-4.882 42.584-13.6 61.145l60.228 60.228c12.496 12.497 12.496 32.758 0 45.255-12.498 12.497-32.759 12.496-45.256 0l-54.736-54.736C345.886 467.965 314.351 480 280 480V236c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v244c-34.351 0-65.886-12.035-90.636-32.108l-54.736 54.736c-12.498 12.497-32.759 12.496-45.256 0-12.496-12.497-12.496-32.758 0-45.255l60.228-60.228C92.882 378.584 88 357.864 88 336v-16H32.666C15.23 320 .491 306.33.013 288.9-.484 270.816 14.028 256 32 256h56v-58.745l-46.628-46.628c-12.496-12.497-12.496-32.758 0-45.255 12.498-12.497 32.758-12.497 45.256 0L141.255 160h229.489l54.627-54.627c12.498-12.497 32.758-12.497 45.256 0 12.496 12.497 12.496 32.758 0 45.255L424 197.255V256h56c17.972 0 32.484 14.816 31.988 32.9zM257 0c-61.856 0-112 50.144-112 112h224C369 50.144 318.856 0 257 0z">
-                                                        </path>
-                                                    </svg>
+                                                    <label className="checkbox4">
+                                                        <input
+                                                            type="checkbox"
+                                                            value="Add On's"
+                                                            name="package"
+                                                            checked={isAddOns}
+                                                            onChange={handleAddOns} />
+                                                        <svg viewBox="0 0 21 18">
+                                                            <symbol id="tick-path4" viewBox="0 0 21 18" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M5.22003 7.26C5.72003 7.76 7.57 9.7 8.67 11.45C12.2 6.05 15.65 3.5 19.19 1.69" fill="none" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </symbol>
+                                                            <defs>
+                                                                <mask id="tick4">
+                                                                    <use className="tick4 mask4" href="#tick-path4" />
+                                                                </mask>
+                                                            </defs>
+                                                            <use className="tick4" href="#tick-path4" stroke="currentColor" />
+                                                            <path fill="white" mask="url(#tick4)" d="M18 9C18 10.4464 17.9036 11.8929 17.7589 13.1464C17.5179 15.6054 15.6054 17.5179 13.1625 17.7589C11.8929 17.9036 10.4464 18 9 18C7.55357 18 6.10714 17.9036 4.85357 17.7589C2.39464 17.5179 0.498214 15.6054 0.241071 13.1464C0.0964286 11.8929 0 10.4464 0 9C0 7.55357 0.0964286 6.10714 0.241071 4.8375C0.498214 2.39464 2.39464 0.482143 4.85357 0.241071C6.10714 0.0964286 7.55357 0 9 0C10.4464 0 11.8929 0.0964286 13.1625 0.241071C15.6054 0.482143 17.5179 2.39464 17.7589 4.8375C17.9036 6.10714 18 7.55357 18 9Z" />
+                                                        </svg>
+                                                        <svg className="lines" viewBox="0 0 11 11">
+                                                            <path d="M5.88086 5.89441L9.53504 4.26746" />
+                                                            <path d="M5.5274 8.78838L9.45391 9.55161" />
+                                                            <path d="M3.49371 4.22065L5.55387 0.79198" />
+                                                        </svg>
+                                                    </label>
                                                 </div>
                                             </div>
                                             <div className="grow ml-6">
-                                                <p className="font-bold font-larissa tracking-wide mb-1">Picnic For 4</p>
-                                                <p className="text-gray-500 font-larissa text-sm">Party for 4 Beach Style</p>
-                                                <p className="text-gray-500 font-larissa">$599</p>
+                                                <p className="text-[#283845] font-bold font-larissa tracking-wide mb-1">Add On's</p>
+                                                <p className="text-gray-500 font-roboto font-bold mb-1 text-sm">Curated Amenities for a Beach Lifestyle</p>
+                                                <p className="text-[#283845] font-larissa">$$$</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        </form>
                     </div>
                 </div>
             </section>

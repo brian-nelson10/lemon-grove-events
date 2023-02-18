@@ -34,9 +34,9 @@ const main = {
     }
 };
 export default function Home() {
-    // React.useState(() => {
-    //     typeof windows !== "undefined" && window.scrollTo(0, 0);
-    //   }, []);
+    React.useState(() => {
+        typeof windows !== "undefined" && window.scrollTo(0, 0);
+      }, []);
       const [show, setShow] = useState(false)
       const changeShow = () => {
         if (window.scrollY >= 3460) {

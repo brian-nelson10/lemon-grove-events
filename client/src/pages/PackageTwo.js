@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./home.css";
-// import img1 from "../assets/images/stock.jpeg";
 import Contact from "../components/Contact";
 import Lemon from "../components/Lemon";
 import Footer from "../components/Footer";
 // import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import lemon from "../assets/images/lemonbw.png";
+import lemon from "../assets/images/lemonbw2.png";
 import Button from "../components/Button";
 
 const main = {
@@ -43,7 +42,7 @@ const pack = {
         }
     }
 }
-const PackageOne= () => {
+const PackageTwo= () => {
     // const navigate = useNavigate();
     const [color, setColor] = useState(false)
     const changeColor = () => {
@@ -65,16 +64,13 @@ const PackageOne= () => {
             animate="animate"
             exit="exit"
             className="mx-[2rem] mt-[7rem] z-40">
-                
-        <section className="grid grid-cols-2 mx-[2rem] flex items-center h-[30%] w-vw mb-10 bg-fixed bg-center bg-cover rounded-sm custom-img"
->
-
+        <section className="grid grid-cols-2 mx-[2rem] flex items-center h-[30%] w-vw mb-10 bg-fixed bg-center bg-cover rounded-sm custom-img">
   <motion.div 
     variants={pack}
     initial="initial"
     whileInView="animate"
     className="p-5 font-larissa pt-11 text-[1.8rem] h-[7.5rem] text-white tracking-widest">
-  Package One
+  Package Two
   </motion.div>
 </section>
 <section>
@@ -82,6 +78,7 @@ const PackageOne= () => {
 <div class="container mx-auto xl:px-32 text-center lg:text-left">
   <div class="grid lg:grid-cols-2 flex items-center">
     <div class="mb-12 lg:mb-0">
+   
       <div
         className="block rounded-lg shadow-[0_35px_60px_15px_rgba(0,0,0,0.3)] shadow-lg px-6 py-12 lg:py-6 xl:py-12 md:px-12 lg:-mr-14"
         style={{ background: "hsla(0, 0%, 100%, 0.55)", backdropFilter: "blur(30px)"}}
@@ -90,9 +87,9 @@ const PackageOne= () => {
       <h5 class="text-lg text-[#283845] font-roboto font-bold mb-12 lg:mb-10 xl:mb-12">Let us deliver your perfect day</h5>
 <div className="grid grid-cols-3">
     <div className="col-span-2 ">
-      <p class="font-bold font-larissa text-[3rem] text-[#283845] tracking-widest mb-4 justify-start">Package One</p>
+      <p class="font-bold font-larissa text-[3rem] text-[#283845] tracking-widest mb-4 justify-start">Package Two</p>
       </div>
-      <div className="h-[40%] w-[50%] col-span-1 justify-end -rotate-[15deg]"><img src={lemon}/></div>
+      <div className="h-[40%] w-[50%] col-span-1 justify-end"><img src={lemon}/></div>
       </div>
       <ul className="z-60 mx-4">
         <li className="flex items-center justify-start mb-4">
@@ -154,4 +151,4 @@ const PackageOne= () => {
         </>
     );
 };
-export default PackageOne;
+export default PackageTwo;

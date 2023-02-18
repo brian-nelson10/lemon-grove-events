@@ -76,13 +76,13 @@ const SectionOne = () => {
  </div>
 </motion.section>
 <br/><br/><br/><br/>
-<section className="container flex items-center justify-center h-[30%] m-auto -mb-10 bg-fixed bg-center bg-cover rounded-xl custom-img"
+<section className="container flex items-center justify-center h-[30%] m-auto -mb-10 bg-fixed bg-center bg-cover rounded-xl drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] custom-img"
 >
   <motion.div 
     variants={pack}
     initial="initial"
     whileInView="animate"
-    className="p-5 font-larissa text-[5rem] text-white tracking-widest">
+    className="p-5 font-larissa text-[5rem] text-white tracking-widest ">
   The Packages.
   </motion.div>
 </section>

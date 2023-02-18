@@ -18,7 +18,7 @@ const Menu = () => {
     return (
         <>
             <br /><br />
-            <section className="container bg-[#efe5dc] mt-[2rem] relative mx-auto items-center justify-center text-center h-[75rem] w-screen ml-[9rem] bg-fixed bg-center bg-cover rounded-xl z-50 menu-img">
+            <section className="container bg-[#efe5dc] drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] -mb-[10rem] mt-[3rem] relative mx-auto items-center justify-center text-center h-[75rem] w-screen ml-[9rem] bg-fixed bg-center bg-cover rounded-xl z-50 menu-img">
                 <motion.div
                     variants={pack}
                     initial="initial"
@@ -244,7 +244,7 @@ const Menu = () => {
                         </div>
                     </div>
                     <div className="mb-6 mt-2 z-50 lg:mb-0 ">
-                            <div className="block rounded-lg shadow-lg bg-white h-[30rem] border-spacing-[3rem] border-seperate border-2 border-solid border-spacing-[3rem] border-seperate border-2 border-solid border-[#afafa5]">
+                            <div className="block rounded-lg shadow-lg bg-white h-[20rem] border-spacing-[3rem] border-seperate border-2 border-solid border-spacing-[3rem] border-seperate border-2 border-solid border-[#afafa5]">
                                 <div className="p-6 border-b border-gray-300 text-center">
                                     <p className="uppercase mb-4 text-lg tracking-widest font-larissa">
                                         <strong>Add On's</strong>
