@@ -11,6 +11,7 @@ import { setContext } from '@apollo/client/link/context';
 // import Home from './pages/Home';
 // import Test from './pages/Test';
 import AnimatedRoutes from './components/AnimatedRoutes';
+import ScrollTop from './components/ScrollTop';
 // import ScrollToTop from './components/ScrollToTop';
 // import Navbar from './components/Navbar';
 // import Footer from './components/Footer';
@@ -73,6 +74,7 @@ function App() {
          exit="exit"
          className="base-page-size">  */}
 <Router >
+  <ScrollTop/>
   {/* <div className='z-50'>
          <ScrollToTop />
          </div> */}

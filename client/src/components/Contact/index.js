@@ -1,7 +1,8 @@
 import React, { useRef, useState } from "react";
 import "./contact.css";
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 import emailjs from '@emailjs/browser';
+import { useNavigate } from 'react-router-dom';
 
 const pack = {
     initial: {
@@ -22,7 +23,26 @@ const Contact = () => {
     const [isPackageTwo, setIsPackageTwo] = useState('');
     const [isPackageThree, setIsPackageThree] = useState('');
     const [isAddOns, setIsAddOns] = useState('');
-
+    const navigate = useNavigate();
+    const routeChange = () => {
+        let path = "/success";
+        navigate(path);
+    }
+  const [isAnimating, setIsAnimating] = useState(false);
+  const loadingBarControls = useAnimation();
+  const animate = async () => {
+    setIsAnimating(true);
+    loadingBarControls.start({
+        width: '100%',
+        transition: { duration: 1.35 }
+      });
+      await loadingBarControls.start({
+        width: '100%',
+        transition: { duration: 1.35 }
+      });
+       routeChange();
+      setIsAnimating(false);
+    };
     const handlePackage = () => {
         setIsPackageOne(!isPackageOne);
     };
@@ -40,9 +60,9 @@ const Contact = () => {
         e.preventDefault();
        
         emailjs.sendForm('service_b1dblxj', 'template_6bq4mri', form.current, 'a6ADH15ktmshf56k_')
-            .then((result) => {
-                alert('Success!!');
-            })
+            // .then((result) => {
+            //     alert('Success!!');
+            // })
     }
 
     return (
@@ -107,7 +127,7 @@ const Contact = () => {
                                     </div>
                                     </div>
                                     <div className="form-group mb-6">
-                                        <input type="number" name="phone" className="form-control block
+                                        <input type="tel" name="phone" className="form-control block
                 w-full
                 px-3
                 py-1.5
@@ -180,14 +200,15 @@ const Contact = () => {
                                     </div> */}
                                     <div className="container mt-8 justify-center items-center">
                                         <button className="btn1 btn-solid1 btn-white1 text-[#283845] font-larissa tracking-widest font-bold border-[#283845]" >
-                                        <input className="texter hover:cursor-pointer" type="submit" value="Complete Booking" />
+                                        <input className="texter hover:cursor-pointer" type="submit" value="Complete Booking" onClick={() => !isAnimating && animate()}/>
+                                        <motion.div className="loading-bar" animate={loadingBarControls}/>
                                         </button>
                                     </div>
                                 {/* </form> */}
                             </div>
                             <div className="grow-0 shrink-0 basis-auto w-full xl:w-7/12">
                                 <div className="-mt-2 mb-[2rem]">
-                                    <span className="font-larissa text-[2.2rem]">Select Package</span>
+                                    <span className="font-larissa text-[2.2rem]">Select Your Package</span>
                                     
                                 </div>
                                 <div className="flex flex-wrap">
@@ -262,9 +283,9 @@ const Contact = () => {
                                                 </div>
                                             </div>
                                             <div className="grow ml-6">
-                                                <p className="text-[#283845] font-bold font-larissa tracking-wide mb-1">Event</p>
+                                                <p className="text-[#283845] font-bold font-larissa tracking-wide mb-1">Event.</p>
                                                 <p className="text-gray-500 font-roboto font-bold mb-1 text-sm">A curated amenity for a beach lifestyle</p>
-                                                <p className="text-[#283845] font-larissa">$499</p>
+                                                <p className="text-[#283845] font-larissa">$400</p>
                                             </div>
                                         </div>
                                     </div>
@@ -301,8 +322,8 @@ const Contact = () => {
                                             </div>
                                             <div className="grow ml-6">
                                                 <p className="text-[#283845] font-bold font-larissa tracking-wide mb-1">I do.</p>
-                                                <p className="text-gray-500 font-roboto font-bold mb-1 text-sm">A Curated Amenity For a Beach Lifestyle</p>
-                                                <p className="text-[#283845] font-larissa">$499</p>
+                                                <p className="text-gray-500 font-roboto font-bold mb-1 text-sm">Make this a memory you'll treasure forever.</p>
+                                                <p className="text-[#283845] font-larissa">$300</p>
                                             </div>
                                         </div>
                                     </div>
@@ -338,7 +359,7 @@ const Contact = () => {
                                                 </div>
                                             </div>
                                             <div className="grow ml-6">
-                                                <p className="text-[#283845] font-bold font-larissa tracking-wide mb-1">Add On's</p>
+                                                <p className="text-[#283845] font-bold font-larissa tracking-wide mb-1">Add On's.</p>
                                                 <p className="text-gray-500 font-roboto font-bold mb-1 text-sm">Curated Amenities for a Beach Lifestyle</p>
                                                 <p className="text-[#283845] font-larissa">$$$</p>
                                             </div>

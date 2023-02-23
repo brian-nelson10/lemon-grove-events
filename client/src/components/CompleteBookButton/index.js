@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "./bookButton.css";
+import "./complete.css";
 import { motion, useAnimation } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 const wordVariants = {
@@ -24,13 +24,14 @@ const entry = {
         }
     }
 }
-const BookButton = () => {
+const CompleteBookButton = () => {
     const navigate = useNavigate();
     const routeChange = () => {
         let path = "/book";
         navigate(path);
     }
   const [isAnimating, setIsAnimating] = useState(false);
+//   const navigate = useNavigate();
   const uploadControls = useAnimation();
   const loadingControls = useAnimation();
   const doneControls = useAnimation();
@@ -79,11 +80,10 @@ const BookButton = () => {
   };
   return (
     <motion.div 
-        layout
         variants={entry}
         initial="initial"
         animate="animate"
-        className="absolute z-50 pt-6 upload-button hover:cursor-pointer justify-center bg-black items-center grid top-96 right-2/4 left-2/4">
+        className="absolute z-50 pt-6 upload-button hover:cursor-pointer justify-center bg-black items-center grid">
       <div className="wrapper overflow-hidden cursor-pointer rounded-lg relative items-center justify-center" onClick={() => !isAnimating && animate()}>
         <motion.div 
           className="container1 bg-transparent z-10 top-0 cursor-pointer text-white"
@@ -117,4 +117,4 @@ const BookButton = () => {
   )
 }
 
-export default BookButton;
+export default CompleteBookButton;

@@ -11,7 +11,7 @@ export default function HeroText() {
             fillOpacity: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, .1, .1, .2, .3, .4, .5, .6, .8, .9, 1],
             transition: {
                 duration: 3,
-                delay: 5.5,
+                delay: 1.5,
                 ease: "easeIn"
             }
         }

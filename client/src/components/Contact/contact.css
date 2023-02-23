@@ -53,6 +53,7 @@
     border: none;
     padding: 0;
     margin: 0;
+    appearance: none;
     -webkit-appearance: none;
     width: 48px;
     height: 48px;
@@ -130,6 +131,7 @@
     border: none;
     padding: 0;
     margin: 0;
+    appearance: none;
     -webkit-appearance: none;
     width: 48px;
     height: 48px;
@@ -207,6 +209,7 @@
     border: none;
     padding: 0;
     margin: 0;
+    appearance: none;
     -webkit-appearance: none;
     width: 48px;
     height: 48px;
@@ -284,6 +287,7 @@
     border: none;
     padding: 0;
     margin: 0;
+    appearance: none;
     -webkit-appearance: none;
     width: 48px;
     height: 48px;
@@ -339,13 +343,12 @@
         stroke-dashoffset: 4.5px;
    }
 }
-/* html {
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
+.loading-bar {
+    position: absolute;
+    top: calc(100% - 3px);
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: white;
 }
-* {
-    box-sizing: inherit;
-}
-*:before, *:after {
-    box-sizing: inherit;
-} */
+

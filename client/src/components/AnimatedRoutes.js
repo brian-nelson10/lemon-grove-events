@@ -6,12 +6,14 @@ import { AnimatePresence } from 'framer-motion';
 import Book from "../pages/Book";
 import PackageOne from "../pages/PackageOne";
 import PackageTwo from "../pages/PackageTwo";
+import PackageThree from "../pages/PackageThree";
 import AddOns from "../pages/AddOns";
+import Success from "../pages/Success";
 
 function AnimatedRoutes() {
     const location = useLocation();
     return (
-        <AnimatePresence>
+        <AnimatePresence exitBeforeEnter>
            
 <Routes location={location} key={location.pathname}>
             <Route
@@ -27,16 +29,25 @@ function AnimatedRoutes() {
                 element={<Book/>}
                 />
                 <Route 
-                path="/packageone"
+                path="/date"
                 element={<PackageOne/>}
                 />
                 <Route 
-                path="/packagetwo"
+                path="/event"
                 element={<PackageTwo/>}
+                />
+                  <Route 
+                path="/ido"
+                element={<PackageThree/>}
                 />
                 <Route 
                 path="/addons"
                 element={<AddOns/>}
+                />
+                <Route 
+                text="Success"
+                path="/success"
+                element={<Success/>}
                 />
                 <Route 
                 path="/Test"

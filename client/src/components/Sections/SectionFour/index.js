@@ -1,9 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import img from "../../../assets/images/stockTwo.jpeg";
 import icon from "../../../assets/images/lemonbw3.png";
+import Button from "../../Button";
 
 const SectionFour = () => {
+    const navigate = useNavigate();
+    function handlePackageDetails() {
+        navigate("/ido");
+    }
     return (
         <>
         <br/><br/>
@@ -15,14 +21,12 @@ const SectionFour = () => {
                             </motion.div>
                         </div>
                         <div className="grid-cols-1 gap-4 ml-2 mr-[4rem] justify-end items-end text-end -mt-16">
-                            <div className="font-larissa text-[100px] -mb-4 ml-2">Package 3 </div>
-                            <div className="text-xl font-larissa justify-end items-end text-end mb-4"><p>A curated amenity for a beach lifestyle.</p>
+                            <div className="font-larissa text-[#283845] text-[100px] -mb-4 ml-2">I do.</div>
+                            <div className="text-2xl font-bold font-roboto text-[#283845] justify-end items-end text-end mb-6"><p>Make this a memory you'll treasure forever.</p>
                             </div>
-                            <div className="justify-end items-end text-end mt-[3rem] -mb-[1.5rem] ml-[18rem]">
+                            <div className="justify-end items-end text-end mt-[3rem] -mb-[1.5rem] ml-[19rem]">
                             <div >
-                            <a className="btn btn-solid btn-white text-black border-black mr-[rem]" href="" target="_self">
-                                <span className="texter">Package 3</span>
-                            </a>
+                            <Button children="Details" onClick={handlePackageDetails}/>
                             </div>
                             <div >
                             <img className="icon w-[200px] h-[180px] justify-end items-end text-end -mt-[6rem] mb-0 ml-6 rotate-[40deg]" alt="" src={icon} />

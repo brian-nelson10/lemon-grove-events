@@ -1,6 +1,8 @@
 import React from "react";
 import "./menu.css";
 import { motion } from 'framer-motion';
+import Button from "../Button";
+import { useNavigate } from "react-router-dom";
 const pack = {
     initial: {
         opacity: 0
@@ -15,6 +17,10 @@ const pack = {
     }
 }
 const Menu = () => {
+    const navigate = useNavigate();
+    function handleBook() {
+        navigate("/book")
+    }
     return (
         <>
             <br /><br />
@@ -31,126 +37,166 @@ const Menu = () => {
                     variants={pack}
                     initial="initial"
                     whileInView="animate"
-                    className="font-larissa text-[1rem] mb-6 -mt-4 text-[#283845] tracking-widest">
-                    We're here to make it happen.
+                    className="font-roboto text-[2rem] mb-6 -mt-7 text-[#283845] tracking-widest">
+                    Let us deliver your perfect day.
                 </motion.div>
                 <hr className="top-2 border-[#283845] border-solid"/>
                 <div className="container my-20 px-6 mx-auto">
-
-                    {/* <h2 className="text-3xl font-bold text-center mb-12">Pricing</h2> */}
-
                     <div className="grid lg:grid-cols-3 gap-6 lg:gap-x-12">
                         <div className="mb-6 lg:mb-0">
-                            <table className="block border-spacing-[3rem] border-seperate border-2 border-solid border-[#afafa5] rounded-lg shadow-lg bg-white h-[40rem]">
+                            <div className="block border-spacing-[3rem] border-seperate border-2 border-solid border-[#afafa5] rounded-lg shadow-lg bg-white h-[40rem]">
                                 <div className="p-6 border-b border-gray-300 bordertext-center">
                                     <p className="uppercase mb-4 text-lg text-[#283845] tracking-widest font-larissa">
-                                        <strong>Picnic</strong>
+                                        <strong>Date.</strong>
                                     </p>
                                     <h3 className="text-2xl font-larissa mb-6 text-[#283845] ">
                                         <strong>$ 300</strong>
                                     </h3>
                                     <div >
-                                        <a className="btn btn-solid btn-white text-[#283845] border-[#283845] mr-[rem]" href="" target="_self">
-                                            <span className="texter">Book Now</span>
-                                        </a>
+                                        <Button children="Book Now" onClick={handleBook} />
                                     </div>
                                 </div>
                                 <div className="container flex pt-6 items-center justify-center text-center">
-                                    <ol className="list-inside items-center justify-center text-center">
-                                        <li className="mb-4 flex items-center">
+                                    <ol className="list-inside items-center justify-center text-center mt-10 ml-6">
+                                        <li className="mb-4 flex items-center font-roboto font-bold tracking-wide">
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                                                className="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                className="text-[#283845] w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 512 512">
                                                 <path fill="currentColor"
                                                     d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                                                 </path>
-                                            </svg>Unlimited updates
+                                            </svg>2 Hours
                                         </li>
-                                        <li className="mb-4 flex items-center">
+                                        <li className="mb-4 flex items-center font-roboto font-bold tracking-wide">
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                                                className="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                className="text-[#283845] w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 512 512">
                                                 <path fill="currentColor"
                                                     d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                                                 </path>
-                                            </svg>Git repository
+                                            </svg>2-4 People
                                         </li>
-                                        <li className="mb-4 flex items-center">
+                                        <li className="mb-4 flex items-center font-roboto font-bold tracking-wide">
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                                                className="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                className="text-[#283845] w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 512 512">
                                                 <path fill="currentColor"
                                                     d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                                                 </path>
-                                            </svg>npm installation
+                                            </svg>Low Picnic Table
+                                        </li>
+                                        <li className="mb-4 flex items-center font-roboto font-bold tracking-wide">
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                                className="text-[#283845] w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 512 512">
+                                                <path fill="currentColor"
+                                                    d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                                </path>
+                                            </svg>Tableware & Decor
+                                        </li>
+                                        <li className="mb-4 flex items-center font-roboto font-bold tracking-wide">
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                                className="text-[#283845] w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 512 512">
+                                                <path fill="currentColor"
+                                                    d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                                </path>
+                                            </svg>Rugs, Pillows & Chairs
+                                        </li>
+                                        <li className="mb-4 flex items-center tracking-wide">
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                                className="text-[#283845] w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 512 512">
+                                                <path fill="currentColor"
+                                                    d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                                </path>
+                                            </svg><div className=" font-roboto font-bold">Choice of Location</div>
                                         </li>
                                     </ol>
                                 </div>
-                            </table>
+                            </div>
                         </div>
 
                         <div className="mb-6 -mt-[2rem] lg:mb-0">
                             <div className="block rounded-lg shadow-lg bg-white h-[40rem] border-spacing-[3rem] border-seperate border-2 border-solid border-[#afafa5]">
                                 <div className="p-6 border-b border-gray-300 text-center">
                                     <p className="uppercase font-larissa tracking-widest mb-4 text-lg">
-                                        <strong>Engagement</strong>
+                                        <strong>I do.</strong>
                                     </p>
                                     <h3 className="text-2xl  font-larissa mb-6">
-                                        <strong>$ 299</strong>
+                                        <strong>$ 300</strong>
                                         
                                     </h3>
                                     <div >
-                                        <a className="btn btn-solid btn-white text-[#283845] border-[#283845] mr-[rem]" href="" target="_self">
-                                            <span className="texter">Book Now</span>
-                                        </a>
+                                    <div >
+                                        <Button children="Book Now" onClick={handleBook} />
+                                    </div>
                                     </div>
                                 </div>
                                 <div className="p-6 container flex pt-6 items-center justify-center text-center">
-                                    <ol className="list-inside">
-                                        <li className="mb-4 flex items-center">
+                                    <ol className="list-inside mt-8">
+                                        <li className="mb-4 flex items-center font-roboto font-bold tracking-wide">
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                                                className="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                className="text-[#283845] w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 512 512">
                                                 <path fill="currentColor"
                                                     d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                                                 </path>
-                                            </svg>Unlimited updates
+                                            </svg>2 Hours
                                         </li>
-                                        <li className="mb-4 flex items-center">
+                                        <li className="mb-4 flex items-center font-roboto font-bold tracking-wide">
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                                                className="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                className="text-[#283845] w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 512 512">
                                                 <path fill="currentColor"
                                                     d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                                                 </path>
-                                            </svg>Git repository
+                                            </svg>'Marry Me' light up sign
                                         </li>
-                                        <li className="mb-4 flex items-center">
+                                        <li className="mb-4 flex items-center font-roboto font-bold tracking-wide">
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                                                className="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                className="text-[#283845] w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 512 512">
                                                 <path fill="currentColor"
                                                     d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                                                 </path>
-                                            </svg>npm installation
+                                            </svg>Boho Tent
                                         </li>
-                                        <li className="mb-4 flex items-center">
+                                        <li className="mb-4 flex items-center font-roboto font-bold tracking-wide">
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                                                className="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                className="text-[#283845] w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 512 512">
                                                 <path fill="currentColor"
                                                     d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                                                 </path>
-                                            </svg>Code examples
+                                            </svg>Flower Petals & Arrangement
                                         </li>
-                                        <li className="mb-4 flex items-center">
+                                        <li className="mb-4 flex items-center font-roboto font-bold tracking-wide">
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                                                className="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                className="text-[#283845] w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 512 512">
                                                 <path fill="currentColor"
                                                     d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                                                 </path>
-                                            </svg>Premium snippets
+                                            </svg>Pillows, Rugs & Chairs
+                                        </li>
+                                        <li className="mb-4 flex items-center font-roboto font-bold tracking-wide">
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                                className="text-[#283845] w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 512 512">
+                                                <path fill="currentColor"
+                                                    d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                                </path>
+                                            </svg>Festive Lighting & Candles
+                                        </li>
+                                        <li className="mb-4 flex items-center font-roboto font-bold tracking-wide">
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                                className="text-[#283845] w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 512 512">
+                                                <path fill="currentColor"
+                                                    d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                                </path>
+                                            </svg>Bluetooth Speaker w/ Preset Playlist
                                         </li>
                                     </ol>
                                 </div>
@@ -161,77 +207,77 @@ const Menu = () => {
                             <div className="block rounded-lg shadow-lg bg-white h-[40rem] border-spacing-[3rem] border-seperate border-2 border-solid border-[#afafa5]">
                                 <div className="p-6 border-b border-gray-300 text-center">
                                     <p className="uppercase font-larissa tracking-widest mb-4 text-lg">
-                                        <strong>Picnic for 4</strong>
+                                        <strong>Event.</strong>
                                     </p>
                                     <h3 className="text-2xl font-larissa mb-6">
-                                        <strong>$ 499</strong>
+                                        <strong>$ 400</strong>
                                        
                                     </h3>
                                     <div >
-                                        <a className="btn btn-solid btn-white text-[#283845] border-[#283845] mr-[rem]" href="" target="_self">
-                                            <span className="texter">Book Now</span>
-                                        </a>
+                                    <div >
+                                        <Button children="Book Now" onClick={handleBook} />
+                                    </div>
                                     </div>
                                 </div>
                                 <div className="p-6 container flex pt-6 items-center justify-center text-center">
-                                    <ol className="list-inside">
+                                    <ol className="list-inside font-roboto font-bold tracking-wide">
                                         <li className="mb-4 flex items-center">
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                                                className="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                className="text-[#283845] w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 512 512">
                                                 <path fill="currentColor"
                                                     d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                                                 </path>
                                             </svg>Unlimited updates
                                         </li>
-                                        <li className="mb-4 flex items-center">
+                                        <li className="mb-4 flex items-center font-roboto font-bold tracking-wide">
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                                                className="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                className="text-[#283845] w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 512 512">
                                                 <path fill="currentColor"
                                                     d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                                                 </path>
                                             </svg>Git repository
                                         </li>
-                                        <li className="mb-4 flex items-center">
+                                        <li className="mb-4 flex items-center font-roboto font-bold tracking-wide">
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                                                className="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                className="text-[#283845] w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 512 512">
                                                 <path fill="currentColor"
                                                     d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                                                 </path>
                                             </svg>npm installation
                                         </li>
-                                        <li className="mb-4 flex items-center">
+                                        <li className="mb-4 flex items-center font-roboto font-bold tracking-wide">
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                                                className="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                className="text-[#283845] w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 512 512">
                                                 <path fill="currentColor"
                                                     d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                                                 </path>
                                             </svg>Code examples
                                         </li>
-                                        <li className="mb-4 flex items-center">
+                                        <li className="mb-4 flex items-center font-roboto font-bold tracking-wide">
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                                                className="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                className="text-[#283845] w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 512 512">
                                                 <path fill="currentColor"
                                                     d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                                                 </path>
                                             </svg>Premium snippets
                                         </li>
-                                        <li className="mb-4 flex items-center">
+                                        <li className="mb-4 flex items-center font-roboto font-bold tracking-wide">
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                                                className="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                className="text-[#283845] w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 512 512">
                                                 <path fill="currentColor"
                                                     d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                                                 </path>
                                             </svg>Premium support
                                         </li>
-                                        <li className="mb-4 flex items-center">
+                                        <li className="mb-4 flex items-center font-roboto font-bold tracking-wide">
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                                                className="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                className="text-[#283845] w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 512 512">
                                                 <path fill="currentColor"
                                                     d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
@@ -250,16 +296,16 @@ const Menu = () => {
                                         <strong>Add On's</strong>
                                     </p>
                                     <div >
-                                        <a className="btn btn-solid btn-white text-[#283845] border-[#283845] mr-[rem]" href="" target="_self">
-                                            <span className="texter">Book Now</span>
-                                        </a>
+                                    <div >
+                                        <Button children="Book Now" onClick={handleBook} />
+                                    </div>
                                     </div>
                                 </div>
                                 <div className="container flex pt-6 items-center justify-center text-center">
                                     <ol className="list-inside items-center justify-center text-center">
                                         <li className="mb-4 flex items-center">
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                                                className="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                className="text-[#283845] w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 512 512">
                                                 <path fill="currentColor"
                                                     d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
@@ -268,7 +314,7 @@ const Menu = () => {
                                         </li>
                                         <li className="mb-4 flex items-center">
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                                                className="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                className="text-[#283845] w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 512 512">
                                                 <path fill="currentColor"
                                                     d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
@@ -277,7 +323,7 @@ const Menu = () => {
                                         </li>
                                         <li className="mb-4 flex items-center">
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
-                                                className="text-green-600 w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                className="text-[#283845] w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 512 512">
                                                 <path fill="currentColor"
                                                     d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">

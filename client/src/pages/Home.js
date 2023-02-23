@@ -13,22 +13,24 @@ import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
 const main = {
     initial: {
-        x: 100,
-        y: 0,
+        x: -1000,
         opacity: 0
     },
     animate: {
         opacity: 1,
         x: 0,
-        y: 0,
         transition: {
-            duration: .5,
+            type: 'spring',
+            mass: 0.4,
+            damping: 8,
+            duration: .8,
         }
     },
     exit: {
-        opacity: 0,
-        x: -100,
+        opacity: 1,
+        x: 1000,
         transition: {
+            ease: 'easeInOut',
             duration: .3
         }
     }
@@ -51,11 +53,13 @@ export default function Home() {
         <AnimatePresence>
             <>
             <motion.main 
+            layout
             variants={main}
             initial="initial"
             animate="animate"
             exit="exit">
             <motion.section
+                layout
                 variants={main}
                 initial="initial"
                 animate="animate"

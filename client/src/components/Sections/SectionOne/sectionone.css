@@ -18,7 +18,7 @@
    transform: scale(1.08);
   }
 
-  .btn-solid {
+  /* .btn-solid {
   transform: perspective(1px) translateZ(0) skewX(-8deg);
   box-shadow: 0 0 1px transparent;
   border: 2.5px solid;
@@ -41,4 +41,4 @@
     background-color: #283845;
     color: white;
     
-  }
+  } */

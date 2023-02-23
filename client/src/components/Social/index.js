@@ -10,7 +10,7 @@ const log = {
       x: 0,
       opacity: 1,
       transition: {
-        delay: 4,
+        delay: 2,
         duration: 2.5,
         ease: [0.6, -0.05, 0.01, 1.5],
       },
@@ -28,6 +28,7 @@ const Social = () => {
     window.addEventListener('scroll', changeColor)
     return (
 <motion.div 
+    layout
     variants={log} 
     initial="initial"
     animate="animate"

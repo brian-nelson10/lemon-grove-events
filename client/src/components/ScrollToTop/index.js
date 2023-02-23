@@ -43,6 +43,7 @@ return (
       }}
     > */}
       <motion.img 
+      layout
       variants={scroll}
       initial={false}
       animate= {visible ? "animate" : "initial" }
