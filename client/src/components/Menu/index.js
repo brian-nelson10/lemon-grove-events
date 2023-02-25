@@ -228,7 +228,7 @@ const Menu = () => {
                                                 <path fill="currentColor"
                                                     d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                                                 </path>
-                                            </svg>Unlimited updates
+                                            </svg>2 Hours
                                         </li>
                                         <li className="mb-4 flex items-center font-roboto font-bold tracking-wide">
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
@@ -237,7 +237,7 @@ const Menu = () => {
                                                 <path fill="currentColor"
                                                     d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                                                 </path>
-                                            </svg>Git repository
+                                            </svg>2-8 People
                                         </li>
                                         <li className="mb-4 flex items-center font-roboto font-bold tracking-wide">
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
@@ -246,7 +246,7 @@ const Menu = () => {
                                                 <path fill="currentColor"
                                                     d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                                                 </path>
-                                            </svg>npm installation
+                                            </svg>Low Picnic Tables
                                         </li>
                                         <li className="mb-4 flex items-center font-roboto font-bold tracking-wide">
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
@@ -255,7 +255,7 @@ const Menu = () => {
                                                 <path fill="currentColor"
                                                     d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                                                 </path>
-                                            </svg>Code examples
+                                            </svg>Boho Tent
                                         </li>
                                         <li className="mb-4 flex items-center font-roboto font-bold tracking-wide">
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
@@ -264,7 +264,7 @@ const Menu = () => {
                                                 <path fill="currentColor"
                                                     d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                                                 </path>
-                                            </svg>Premium snippets
+                                            </svg>Rugs, Pillows & Chairs
                                         </li>
                                         <li className="mb-4 flex items-center font-roboto font-bold tracking-wide">
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
@@ -273,7 +273,7 @@ const Menu = () => {
                                                 <path fill="currentColor"
                                                     d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                                                 </path>
-                                            </svg>Premium support
+                                            </svg>Festive Lighting & Candles
                                         </li>
                                         <li className="mb-4 flex items-center font-roboto font-bold tracking-wide">
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
@@ -282,7 +282,16 @@ const Menu = () => {
                                                 <path fill="currentColor"
                                                     d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                                                 </path>
-                                            </svg>Drag&amp;Drop builder
+                                            </svg>Tableware & Decor
+                                        </li>
+                                        <li className="mb-4 flex items-center font-roboto font-bold tracking-wide">
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                                className="text-[#283845] w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 512 512">
+                                                <path fill="currentColor"
+                                                    d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                                </path>
+                                            </svg>Choice of Location
                                         </li>
                                     </ol>
                                 </div>
@@ -301,35 +310,64 @@ const Menu = () => {
                                     </div>
                                     </div>
                                 </div>
-                                <div className="container flex pt-6 items-center justify-center text-center">
+                                <div className="container grid flex pt-6 items-center justify-center text-center">
                                     <ol className="list-inside items-center justify-center text-center">
-                                        <li className="mb-4 flex items-center">
+                                    <div className="grid gap-4 grid-cols-2">
+                                        <li className="mb-4 flex items-center font-roboto font-bold tracking-wide">
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
                                                 className="text-[#283845] w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 512 512">
                                                 <path fill="currentColor"
                                                     d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                                                 </path>
-                                            </svg>Unlimited updates
+                                            </svg>Charcuterie Grazing Tables
                                         </li>
-                                        <li className="mb-4 flex items-center">
+                                        <li className="mb-4 flex items-center justify-end font-roboto font-bold tracking-wide">
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
                                                 className="text-[#283845] w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 512 512">
                                                 <path fill="currentColor"
                                                     d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                                                 </path>
-                                            </svg>Git repository
+                                            </svg>Fruit Platters & Beverages
                                         </li>
-                                        <li className="mb-4 flex items-center">
+                                        <li className="mb-4 flex items-center font-roboto font-bold tracking-wide">
                                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
                                                 className="text-[#283845] w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 512 512">
                                                 <path fill="currentColor"
                                                     d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                                                 </path>
-                                            </svg>npm installation
+                                            </svg>Custom Themed Decor & Styling, Color Options
                                         </li>
+                                        <li className="mb-4 flex items-center justify-end font-roboto font-bold tracking-wide">
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                                className="text-[#283845] w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 512 512">
+                                                <path fill="currentColor"
+                                                    d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                                </path>
+                                            </svg>Upgraded Venue Selections
+                                        </li>
+                                        <li className="mb-4 flex items-center font-roboto font-bold tracking-wide">
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                                className="text-[#283845] w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 512 512">
+                                                <path fill="currentColor"
+                                                    d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                                </path>
+                                            </svg>Partner with Outside Vendor or Services
+                                        </li>
+                                        <li className="mb-4 flex items-center justify-end font-roboto font-bold tracking-wide">
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                                className="text-[#283845] w-4 h-4 mr-2" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 512 512">
+                                                <path fill="currentColor"
+                                                    d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
+                                                </path>
+                                            </svg>Upgraded Floral Selection
+                                        </li>
+                                        </div>
                                     </ol>
                                 </div>
                             </div>

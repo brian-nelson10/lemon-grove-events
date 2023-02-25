@@ -32,16 +32,6 @@ const scroll = {
   };
 return (
     <>
-  
-    {/* <div
-    className='fixed bottom-[40px] inline-block -right-5 bg-transparent hover:cursor-pointer'
-      onClick={() => {
-        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-      }}
-      style={{
-        visibility: visible ? 'visible' : 'hidden',
-      }}
-    > */}
       <motion.img 
       layout
       variants={scroll}
@@ -55,7 +45,6 @@ return (
       }}
       className="fixed bottom-[40px] inline-block -right-5 bg-transparent h-[8%] w-[8%] hover:cursor-pointer"
       src={Arrow} alt="arrow"/>
-    {/* </div> */}
   </>
 );
 }

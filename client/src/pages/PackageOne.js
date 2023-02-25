@@ -72,32 +72,31 @@ const PackageOne= () => {
             animate="animate"
             exit="exit"
             className="mx-[2rem] mt-[7rem] z-40">
-                
-        <section className="grid grid-cols-2 mx-[2rem] flex items-center h-[30%] w-vw mb-10 bg-fixed bg-center bg-cover rounded-sm drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] custom-img"
->
-
+        <section 
+          className="grid grid-cols-2 mx-[2rem] flex items-center h-[30%] w-vw mb-10 bg-fixed bg-center bg-cover rounded-sm drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] custom-img"
+          >
   <motion.div 
     variants={pack}
     initial="initial"
     whileInView="animate"
     className="p-5 font-larissa pt-11 text-[1.8rem] h-[7.5rem] text-white tracking-wide">
-  Date Package
+  Date.
   </motion.div>
 </section>
 <section>
-<section class="mb-32 text-gray-800">
-<div class="container mx-auto xl:px-32 text-center lg:text-left">
-  <div class="grid lg:grid-cols-2 flex items-center">
-    <div class="mb-12 lg:mb-0">
+<section className="mb-32 text-gray-800">
+<div className="container mx-auto xl:px-32 text-center lg:text-left">
+  <div className="grid lg:grid-cols-2 flex items-center">
+    <div className="mb-12 lg:mb-0">
       <div
         className="block rounded-lg shadow-[0_35px_60px_15px_rgba(0,0,0,0.3)] shadow-lg px-6 py-12 lg:py-6 xl:py-12 md:px-12 lg:-mr-14"
         style={{ background: "hsla(0, 0%, 100%, 0.55)", backdropFilter: "blur(30px)"}}
       >
-      <h3 class="text-[2rem] text-[#283845] font-roboto mb-4">Do you want to plan a perfect date to show your partner how much they mean to you?</h3>
-      <h5 class="text-lg text-[#283845] font-roboto font-bold mb-12 lg:mb-4 xl:mb-6">Let us deliver your perfect day</h5>
+      <h3 className="text-[2rem] text-[#283845] font-roboto mb-4">Do you want to plan a perfect date to show your partner how much they mean to you?</h3>
+      <h5 className="text-lg text-[#283845] font-roboto font-bold mb-12 lg:mb-4 xl:mb-6">Let us deliver your perfect day</h5>
 <div className="grid grid-cols-3">
     <div className="col-span-2 ">
-      <p class="font-bold font-larissa text-[3rem] text-[#283845] tracking-widest mb-4 justify-start">Date.</p>
+      <p className="font-bold font-larissa text-[3rem] text-[#283845] tracking-widest mb-4 justify-start">Date.</p>
       </div>
       <div className="h-[40%] w-[50%] col-span-1 justify-end -rotate-[15deg]"><img alt="lemon icon" src={lemon}/></div>
       </div>
@@ -130,7 +129,8 @@ const PackageOne= () => {
     </div>
     <div>
       <div
-        class="w-full rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] h-[60rem] bg-fixed bg-center bg-cover custom-img"
+        
+        className="w-full rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] h-[60rem] bg-fixed bg-center bg-cover custom-img"
         alt=""
       />
     </div>

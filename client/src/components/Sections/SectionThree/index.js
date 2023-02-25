@@ -1,10 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import img from "../../../assets/images/stockTwo.jpeg";
 import icon from "../../../assets/images/lemonbw2.png";
+import iconWeb from "../../../assets/images/web/lemonbw2.webp";
 import Button from "../../Button";
-
+import BackgroundImage from "../../BackgroundImage";
+import Image from "../../Image";
 const SectionThree = () => {
 const navigate = useNavigate();
 function handlePackageDetails() {
@@ -20,7 +21,12 @@ function handlePackageDetails() {
                             <div className="text-2xl font-bold font-roboto text-[#283845] justify-start items-start text-start mb-4"><p>Get together for an unforgettable celebration.</p>
                             </div>
                             <div className="justify-start items-start text-start mt-[3rem] mb-[1rem] ml-[31rem]">
-                            <img className="icon w-[200px] h-[180px] justify-start items-start text-start -mt-[2rem] mb-0 -ml-[16rem] mr-2" alt="" src={icon} />
+                                <div className="icon w-[200px] h-[180px] justify-start items-start text-start -mt-[2rem] mb-0 -ml-[16rem] mr-2">
+                            <Image 
+                                alt="" 
+                                src={iconWeb}
+                                fallback={icon} />
+                            </div>
                             </div>
                             <div className="ml-[5rem] -mt-[8rem]">
                             <Button children="Details" onClick={handlePackageDetails}/>
@@ -28,7 +34,7 @@ function handlePackageDetails() {
                     </div>
                     <div className="mb-4 pl-8 justify-center items-center">
                             <motion.div className="zoomin frame flex flex-wrap container justify-center items-center -ml-[4rem]">
-                                <img className="img w-[1400px] h-[480px]" alt="" src={img} />
+                                <BackgroundImage className="img w-[1400px] h-[480px]" />
                             </motion.div>
                         </div>
                 </div>

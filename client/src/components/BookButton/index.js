@@ -15,12 +15,12 @@ const entry = {
     },
     animate: {
         y: 0,
-        opacity: [0, 0, .1, .2, .4, .6, .8, 1],
+        opacity: [0, 0, 0, .1, .2, .4, .6, .8, 1],
         transition: {
             type: "spring",
             bounce: .3,
             duration: 3,
-            delay: 5.8
+            delay: 3
         }
     }
 }

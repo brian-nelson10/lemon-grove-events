@@ -226,7 +226,7 @@ const Contact = () => {
                                                             onChange={handlePackage} />
                                                         <svg viewBox="0 0 21 18">
                                                             <symbol id="tick-path" viewBox="0 0 21 18" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M5.22003 7.26C5.72003 7.76 7.57 9.7 8.67 11.45C12.2 6.05 15.65 3.5 19.19 1.69" fill="none" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M5.22003 7.26C5.72003 7.76 7.57 9.7 8.67 11.45C12.2 6.05 15.65 3.5 19.19 1.69" fill="none" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round" />
                                                             </symbol>
                                                             <defs>
                                                                 <mask id="tick">
@@ -264,7 +264,7 @@ const Contact = () => {
                                                             onChange={handlePackageTwo} />
                                                         <svg viewBox="0 0 21 18">
                                                             <symbol id="tick-path2" viewBox="0 0 21 18" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M5.22003 7.26C5.72003 7.76 7.57 9.7 8.67 11.45C12.2 6.05 15.65 3.5 19.19 1.69" fill="none" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M5.22003 7.26C5.72003 7.76 7.57 9.7 8.67 11.45C12.2 6.05 15.65 3.5 19.19 1.69" fill="none" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round" />
                                                             </symbol>
                                                             <defs>
                                                                 <mask id="tick2">
@@ -302,7 +302,7 @@ const Contact = () => {
                                                             onChange={handlePackageThree} />
                                                         <svg viewBox="0 0 21 18">
                                                             <symbol id="tick-path3" viewBox="0 0 21 18" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M5.22003 7.26C5.72003 7.76 7.57 9.7 8.67 11.45C12.2 6.05 15.65 3.5 19.19 1.69" fill="none" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M5.22003 7.26C5.72003 7.76 7.57 9.7 8.67 11.45C12.2 6.05 15.65 3.5 19.19 1.69" fill="none" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round" />
                                                             </symbol>
                                                             <defs>
                                                                 <mask id="tick3">
@@ -340,7 +340,7 @@ const Contact = () => {
                                                             onChange={handleAddOns} />
                                                         <svg viewBox="0 0 21 18">
                                                             <symbol id="tick-path4" viewBox="0 0 21 18" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M5.22003 7.26C5.72003 7.76 7.57 9.7 8.67 11.45C12.2 6.05 15.65 3.5 19.19 1.69" fill="none" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M5.22003 7.26C5.72003 7.76 7.57 9.7 8.67 11.45C12.2 6.05 15.65 3.5 19.19 1.69" fill="none" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round" />
                                                             </symbol>
                                                             <defs>
                                                                 <mask id="tick4">

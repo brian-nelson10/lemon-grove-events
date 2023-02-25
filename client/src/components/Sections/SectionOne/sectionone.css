@@ -1,5 +1,5 @@
 .custom-img {
-    background-image: url("../../../assets/images/stock.jpeg");
+  background-image: url('../../../assets/images/web/stock.webp');
 }
   .frame {
     z-index: 2;
@@ -17,28 +17,3 @@
   .frame:hover {
    transform: scale(1.08);
   }
-
-  /* .btn-solid {
-  transform: perspective(1px) translateZ(0) skewX(-8deg);
-  box-shadow: 0 0 1px transparent;
-  border: 2.5px solid;
-  border-color: #283845;
-  font-weight: 510;
-  letter-spacing: .07em;
-  padding: 10px 20px;
-  text-transform: uppercase;
-  font-size: 14px;
-  }
-  .btn {
-    display: inline-block;
-    vertical-align: middle;
-    font-family: Metric,sans-serif;
-    transition: .5s ease-out;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  .btn:hover {
-    background-color: #283845;
-    color: white;
-    
-  } */

@@ -1,16 +1,17 @@
 import React from "react";
 import "./home.css";
 import { useState } from "react";
-import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
-import Hero from "../assets/images/stock.jpeg";
+import { motion, AnimatePresence } from "framer-motion";
+// import Hero from "../assets/images/stock.jpeg";
+import Hero1 from "../components/BackgroundImage";
 import HeroText from "../components/HeroText";
 import Navbar from "../components/Navbar";
 import BookButton from "../components/BookButton";
 import Social from "../components/Social";
 import SectionOne from "../components/Sections/SectionOne";
 import Lemon from "../components/Lemon";
-import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
 const main = {
     initial: {
         x: -1000,
@@ -49,7 +50,7 @@ export default function Home() {
       }
       window.addEventListener('scroll', changeShow);
     return (
-        <AnimateSharedLayout type='crossfade'>
+        // <AnimateSharedLayout type='crossfade'>
         <AnimatePresence>
             <>
             <motion.main 
@@ -69,17 +70,18 @@ export default function Home() {
             <ScrollToTop/>
             </motion.div>
               <section
-                style={{backgroundImage: `url(${Hero})`}}
+                style={{backgroundImage: `url(${Hero1})`}}
                 className='w-screen h-screen flex flex-wrap absolute'>
              <div className={show ? "invisible navi" : "navi z-30"}> 
                <Navbar text="Lemon Grove"/> 
                </div> 
               <div className="heroContainer items-center justify-center flex flex-wrap">
-              <motion.img
+              {/* <motion.img
                     className="w-screen h-screen z-10 overflow-hidden"
                   transition={{ ease: "easeIn", duration: 1.6 }}
                   src={Hero}
-                />
+                /> */}
+                <Hero1 className="w-screen h-screen z-10 overflow-hidden"/>
                 <div className="top-2/4 right-2/4 left-2/4">
                     <BookButton />
                 </div>
@@ -91,17 +93,17 @@ export default function Home() {
                 </div>
               </div>
               <SectionOne />
+              <LazyLoadComponent>
               <section>
                 <Lemon />
               </section>
+              </LazyLoadComponent>
               </section>  
               </motion.section>
-              <section className="grid">
-              <Footer/>  
-              </section>
+              
               </motion.main>
           </>               
       </AnimatePresence>
-    </AnimateSharedLayout>
+    // </AnimateSharedLayout>
     );
 };

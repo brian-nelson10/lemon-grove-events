@@ -85,20 +85,20 @@ const PackageTwo= () => {
   </motion.div>
 </section>
 <section>
-<section class="mb-32 text-gray-800">
-<div class="container mx-auto xl:px-32 text-center lg:text-left">
-  <div class="grid lg:grid-cols-2 flex items-center">
-    <div class="mb-12 lg:mb-0">
+<section className="mb-32 text-gray-800">
+<div className="container mx-auto xl:px-32 text-center lg:text-left">
+  <div className="grid lg:grid-cols-2 flex items-center">
+    <div className="mb-12 lg:mb-0">
    
       <div
         className="block rounded-lg shadow-[0_35px_60px_15px_rgba(0,0,0,0.3)] shadow-lg px-6 py-12 lg:py-6 xl:py-12 md:px-12 lg:-mr-14"
         style={{ background: "hsla(0, 0%, 100%, 0.55)", backdropFilter: "blur(30px)"}}
       >
-      <h3 class="text-[2rem] text-[#283845] font-roboto mb-3">Do you want to plan a perfect date to show your partner how much they mean to you?</h3>
-      <h5 class="text-lg text-[#283845] font-roboto font-bold mb-12 lg:mb-10 xl:mb-12">Let us deliver your perfect day</h5>
+      <h3 className="text-[2rem] text-[#283845] font-roboto mb-3">Do you want to plan a perfect date to show your partner how much they mean to you?</h3>
+      <h5 className="text-lg text-[#283845] font-roboto font-bold mb-12 lg:mb-10 xl:mb-12">Let us deliver your perfect day</h5>
 <div className="grid grid-cols-3">
     <div className="col-span-2 ">
-      <p class="font-bold font-larissa text-[3rem] text-[#283845] tracking-widest mb-4 justify-start">Event.</p>
+      <p className="font-bold font-larissa text-[3rem] text-[#283845] tracking-widest mb-4 justify-start">Event.</p>
       </div>
       <div className="h-[40%] w-[50%] col-span-1 justify-end"><img alt="lemon icon" src={lemon}/></div>
       </div>
@@ -130,7 +130,7 @@ const PackageTwo= () => {
     </div>
     <div>
       <div
-        class="w-full rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] h-[60rem] bg-fixed bg-center bg-cover custom-img"
+        className="w-full rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] h-[60rem] bg-fixed bg-center bg-cover custom-img"
         alt=""
       />
     </div>

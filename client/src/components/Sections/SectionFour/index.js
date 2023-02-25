@@ -1,9 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import img from "../../../assets/images/stockTwo.jpeg";
 import icon from "../../../assets/images/lemonbw3.png";
+import iconWeb from "../../../assets/images/web/lemonbw3.webp";
 import Button from "../../Button";
+import BackgroundImage from "../../BackgroundImage";
+import Image from "../../Image";
 
 const SectionFour = () => {
     const navigate = useNavigate();
@@ -17,7 +19,7 @@ const SectionFour = () => {
                     <div className="grid grid-cols-2 w-full gap-4 items-center justify-center">
                         <div className="mb-4 pl-8 justify-center items-center">
                             <motion.div className="zoomin frame flex flex-wrap container ml-[4rem] justify-center items-center">
-                                <img className="img w-[1400px] h-[480px] z-10" alt="" src={img} />
+                                <BackgroundImage className="img w-[1400px] h-[480px] z-10" />
                             </motion.div>
                         </div>
                         <div className="grid-cols-1 gap-4 ml-2 mr-[4rem] justify-end items-end text-end -mt-16">
@@ -28,8 +30,11 @@ const SectionFour = () => {
                             <div >
                             <Button children="Details" onClick={handlePackageDetails}/>
                             </div>
-                            <div >
-                            <img className="icon w-[200px] h-[180px] justify-end items-end text-end -mt-[6rem] mb-0 ml-6 rotate-[40deg]" alt="" src={icon} />
+                            <div  className="icon w-[200px] h-[180px] justify-end items-end text-end -mt-[6rem] mb-0 ml-6 rotate-[40deg]">
+                            <Image 
+                                alt="" 
+                                src={iconWeb}
+                                fallback={icon} />
                             </div>
                             </div>
                     </div>
