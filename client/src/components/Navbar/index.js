@@ -230,7 +230,7 @@ export default function Navbar({text}) {
   }
   return (
       <>
-      <motion.nav viewport={{ once: true }} layout className={color ? 'navbar z-60 bg-white opacity-[80%] fixed flex flex-wrap w-screen -mt-6 p-1 pt-2 z-50 hover:cursor-pointer md:p-4' : 'navbar z-60 bg-transparent fixed flex flex-wrap w-screen p-1 pt-2 z-50 hover:cursor-pointer md:p-4'}>
+      <motion.nav viewport={{ once: true }} layout className={color ? 'navbar z-60 bg-white opacity-[80%] fixed md:flex flex-wrap w-screen -mt-6 p-1 pt-2 z-50 hover:cursor-pointer md:p-4' : 'navbar z-60 bg-transparent fixed md:flex flex-wrap w-screen p-1 pt-2 z-50 hover:cursor-pointer md:p-4'}>
         <div className="grid grid-cols-3 w-screen ">
        <motion.div
        layout

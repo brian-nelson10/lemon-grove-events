@@ -2,13 +2,16 @@
   "name": "lemon-grove-events",
   "version": "1.0.0",
   "description": "Upscale picnic business website. ",
+  "homepage": "http://<brian-nelson10>.github.io/lemon-grove-events",
   "main": "index.js",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "cd client && npm run start",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "cd server && npm run seed",
-    "build": "cd client && npm run build"
+    "build": "cd client && npm run build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -19,8 +22,11 @@
   "bugs": {
     "url": "https://github.com/brian-nelson10/lemon-grove-events/issues"
   },
-  "homepage": "https://github.com/brian-nelson10/lemon-grove-events#readme",
+ 
   "dependencies": {
     "concurrently": "^7.6.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }

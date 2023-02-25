@@ -71,21 +71,16 @@ export default function Home() {
             </motion.div>
               <section
                 style={{backgroundImage: `url(${Hero1})`}}
-                className='w-screen h-screen flex flex-wrap absolute'>
+                className=' md:w-screen md:h-screen md:flex md:flex-wrap absolute'>
              <div className={show ? "invisible navi" : "navi z-30"}> 
                <Navbar text="Lemon Grove"/> 
                </div> 
-              <div className="heroContainer items-center justify-center flex flex-wrap">
-              {/* <motion.img
-                    className="w-screen h-screen z-10 overflow-hidden"
-                  transition={{ ease: "easeIn", duration: 1.6 }}
-                  src={Hero}
-                /> */}
+              <div className="heroContainer items-center justify-center md:flex flex-wrap">
                 <Hero1 className="w-screen h-screen z-10 overflow-hidden"/>
                 <div className="top-2/4 right-2/4 left-2/4">
                     <BookButton />
                 </div>
-                <div className="top-[7rem] left-[14rem] z-20 absolute ">
+                <div className="top-[7rem] h-1/2 md:left-[14rem] z-20 absolute ">
                 <HeroText />
                 </div>
                 <div className="z-20 fixed">
