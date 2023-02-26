@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.5f44491f.css",
-    "main.js": "/static/js/main.1e30c8e7.js",
-    "static/media/stock.jpeg": "/static/media/stock.b4aad02892471d58ff48.jpeg",
-    "static/media/lemonWhole.png": "/static/media/lemonWhole.d00ba40b4a8a80a49a9f.png",
-    "static/media/1.png": "/static/media/1.5d81d94221d81f2a0938.png",
-    "static/media/stock.webp": "/static/media/stock.0e0aab64ca2cb9a74e90.webp",
-    "static/media/lemonWhole.webp": "/static/media/lemonWhole.be019783bdb901d5477a.webp",
-    "static/media/lemonbw2.png": "/static/media/lemonbw2.decb4143b4ad6e69b075.png",
-    "static/media/lemonbw2.webp": "/static/media/lemonbw2.4b4b49b26c67818920a6.webp",
-    "static/media/lemonbw.png": "/static/media/lemonbw.84a58fd8f14b7060eb1c.png",
-    "static/media/lemonbw.webp": "/static/media/lemonbw.ac8250ce645368240b8c.webp",
-    "static/media/Roboto-Thin.ttf": "/static/media/Roboto-Thin.a732a12eb07742232407.ttf",
-    "static/media/lemonbw3.png": "/static/media/lemonbw3.e4dc5e4e6891f5f5e7c5.png",
-    "static/media/lemonbw3.webp": "/static/media/lemonbw3.61b228749fcc87180a7a.webp",
-    "static/media/Larissa.ttf": "/static/media/Larissa.a7996dca4fba4399bf54.ttf",
-    "index.html": "/index.html",
-    "static/media/social-media-arrow.svg": "/static/media/social-media-arrow.ecc0133cf2e7911d4b7286c107f982ec.svg",
-    "static/media/arrow.svg": "/static/media/arrow.fdab8e6c7e36d62fa8e3bc6d0fef3d26.svg",
-    "main.5f44491f.css.map": "/static/css/main.5f44491f.css.map",
-    "main.1e30c8e7.js.map": "/static/js/main.1e30c8e7.js.map"
+    "main.css": "/lemon-grove-events/static/css/main.cf795b75.css",
+    "main.js": "/lemon-grove-events/static/js/main.5279941c.js",
+    "static/media/stock.jpeg": "/lemon-grove-events/static/media/stock.b4aad02892471d58ff48.jpeg",
+    "static/media/lemonWhole.png": "/lemon-grove-events/static/media/lemonWhole.d00ba40b4a8a80a49a9f.png",
+    "static/media/1.png": "/lemon-grove-events/static/media/1.5d81d94221d81f2a0938.png",
+    "static/media/stock.webp": "/lemon-grove-events/static/media/stock.0e0aab64ca2cb9a74e90.webp",
+    "static/media/lemonWhole.webp": "/lemon-grove-events/static/media/lemonWhole.be019783bdb901d5477a.webp",
+    "static/media/lemonbw2.png": "/lemon-grove-events/static/media/lemonbw2.decb4143b4ad6e69b075.png",
+    "static/media/lemonbw2.webp": "/lemon-grove-events/static/media/lemonbw2.4b4b49b26c67818920a6.webp",
+    "static/media/lemonbw.png": "/lemon-grove-events/static/media/lemonbw.84a58fd8f14b7060eb1c.png",
+    "static/media/lemonbw.webp": "/lemon-grove-events/static/media/lemonbw.ac8250ce645368240b8c.webp",
+    "static/media/Roboto-Thin.ttf": "/lemon-grove-events/static/media/Roboto-Thin.a732a12eb07742232407.ttf",
+    "static/media/lemonbw3.png": "/lemon-grove-events/static/media/lemonbw3.e4dc5e4e6891f5f5e7c5.png",
+    "static/media/lemonbw3.webp": "/lemon-grove-events/static/media/lemonbw3.61b228749fcc87180a7a.webp",
+    "static/media/Larissa.ttf": "/lemon-grove-events/static/media/Larissa.a7996dca4fba4399bf54.ttf",
+    "index.html": "/lemon-grove-events/index.html",
+    "static/media/social-media-arrow.svg": "/lemon-grove-events/static/media/social-media-arrow.ecc0133cf2e7911d4b7286c107f982ec.svg",
+    "static/media/arrow.svg": "/lemon-grove-events/static/media/arrow.fdab8e6c7e36d62fa8e3bc6d0fef3d26.svg",
+    "main.cf795b75.css.map": "/lemon-grove-events/static/css/main.cf795b75.css.map",
+    "main.5279941c.js.map": "/lemon-grove-events/static/js/main.5279941c.js.map"
   },
   "entrypoints": [
-    "static/css/main.5f44491f.css",
-    "static/js/main.1e30c8e7.js"
+    "static/css/main.cf795b75.css",
+    "static/js/main.5279941c.js"
   ]
 }
