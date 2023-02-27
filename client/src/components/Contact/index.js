@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import "./contact.css";
 import { motion, useAnimation } from 'framer-motion';
 import emailjs from '@emailjs/browser';
+import DatePicker from "../DatePicker";
 import { useNavigate } from 'react-router-dom';
 
 const pack = {
@@ -66,7 +67,7 @@ const Contact = () => {
     }
 
     return (
-        <div className="container contactBody mt-[18rem] mb-[100px] w-max drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]">
+        <div className="container contactBody mt-[18rem] mb-100px] w-max drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]">
             <section className="container contactImg relative mx-auto items-center justify-center text-center h-[20rem] w-max ml-[9rem] bg-fixed bg-center bg-cover rounded-xl z-50"
             >
                 <motion.div
@@ -162,7 +163,8 @@ const Contact = () => {
                 focus:text-[#283845] focus:bg-white focus:border-[#283845] focus:outline-none"
                                             placeholder="Email address" />
                                     </div>
-                                    <div className="form-group mb-6">
+                                    <DatePicker className="form-control" type="text" name="date"/>
+                                    <div className="form-group mb-6 mt-6">
                                         <textarea name="message" className="
                 form-control
                 block

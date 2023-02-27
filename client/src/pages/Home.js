@@ -67,13 +67,17 @@ export default function Home() {
                 exit="exit"
                 className="grid grid-rows-2 z-40">
                     <motion.div className="z-50">
+                      <LazyLoadComponent>
             <ScrollToTop/>
+            </LazyLoadComponent>
             </motion.div>
               <section
                 style={{backgroundImage: `url(${Hero1})`}}
-                className=' md:w-screen md:h-screen md:flex md:flex-wrap absolute'>
+                className='w-screen h-screen flex flex-wrap absolute'>
              <div className={show ? "invisible navi" : "navi z-30"}> 
+            
                <Navbar text="Lemon Grove"/> 
+               
                </div> 
               <div className="heroContainer items-center justify-center md:flex flex-wrap">
                 <Hero1 className="w-screen h-screen z-10 overflow-hidden"/>
@@ -87,7 +91,9 @@ export default function Home() {
                     <Social />
                 </div>
               </div>
+              <LazyLoadComponent>
               <SectionOne />
+              </LazyLoadComponent>
               <LazyLoadComponent>
               <section>
                 <Lemon />
